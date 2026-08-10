@@ -110,7 +110,7 @@ function AboutUniversityPage() {
               <span style={{ fontSize: "12px", color: "#047857", marginTop: "4px" }}>Paralakhemundi Campus</span>
               <div style={{ width: "100%", height: 1, background: "rgba(5,150,105,0.2)", margin: "12px 0" }} />
               <img
-                src="/CUTM%20Naac%20A+%20image.jpeg"
+                src="/cutm-naac-a-plus-image.jpeg"
                 alt="NAAC A+ Grade — Centurion University"
                 style={{ height: "90px", width: "100%", objectFit: "contain", borderRadius: "12px", marginBottom: "10px" }}
               />

@@ -118,7 +118,7 @@ function Hero() {
                 Department of Civil Engineering, School of Engineering and Technology
               </p>
               <img
-                src="/CUTM%20Naac%20A+%20image.jpeg"
+                src="/cutm-naac-a-plus-image.jpeg"
                 alt="NAAC A+ Grade — Centurion University of Technology and Management"
                 className="mt-3 h-24 sm:h-28 w-auto object-contain rounded-xl shadow-2xl ring-2 ring-white/70 bg-white/95 backdrop-blur-md px-4 py-3 transition-transform duration-300 hover:scale-[1.04]"
               />
