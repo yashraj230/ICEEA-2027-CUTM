@@ -1,6 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../lib/motion";
 
 export const Route = createFileRoute("/about-university")({
   head: () => ({
@@ -38,7 +40,7 @@ function AboutUniversityPage() {
       <PageHeader />
 
       {/* Hero */}
-      <section style={{
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{
         backgroundImage: "linear-gradient(rgba(6,43,26,0.82), rgba(15,23,42,0.88)), url('/Centurion%20University%20Full%20Image..png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -59,26 +61,26 @@ function AboutUniversityPage() {
           <p style={{ marginTop: 18, color: "#e2e8f0", fontSize: "1.05rem", lineHeight: 1.75, textShadow: "0 1px 5px rgba(0,0,0,0.5)" }}>
             A premier institution at Paralakhemundi, Odisha, dedicated to excellence in engineering, technology, management, and research — proudly hosting ICEEA-ICETS 2027.
           </p>
-          <a href="https://www.cutm.ac.in/" target="_blank" rel="noreferrer"
+          <motion.a href="https://www.cutm.ac.in/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }}
             style={{ display: "inline-block", marginTop: 24, background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "12px 28px", borderRadius: 9999, textDecoration: "none", boxShadow: "0 4px 14px rgba(16,185,129,0.4)" }}>
             Visit CUTM Website →
-          </a>
+          </motion.a>
         </div>
-      </section>
+      </motion.section>
 
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 80px" }}>
+      <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 80px" }}>
         {/* Key Facts */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 16, marginTop: 48 }}>
+        <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 16, marginTop: 48 }}>
           {facts.map(({ icon, label, value }) => (
-            <div key={label} style={{ background: "#fff", borderRadius: 14, padding: "20px 22px", boxShadow: "0 2px 12px rgba(0,0,0,.06)", border: "1px solid #e2e8f0", display: "flex", alignItems: "flex-start", gap: 14 }}>
+            <motion.div key={label} variants={springItem} style={{ background: "#fff", borderRadius: 14, padding: "20px 22px", boxShadow: "0 2px 12px rgba(0,0,0,.06)", border: "1px solid #e2e8f0", display: "flex", alignItems: "flex-start", gap: 14 }}>
               <span style={{ fontSize: "1.5rem" }}>{icon}</span>
               <div>
                 <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase" as const, color: "#10b981", marginBottom: 4 }}>{label}</div>
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#0f172a", lineHeight: 1.4 }}>{value}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* About CUTM */}
         <div style={{ marginTop: 68 }}>
@@ -106,6 +108,13 @@ function AboutUniversityPage() {
               />
               <span style={{ fontSize: "14px", fontWeight: 800, color: "#065f46" }}>CUTM Odisha</span>
               <span style={{ fontSize: "12px", color: "#047857", marginTop: "4px" }}>Paralakhemundi Campus</span>
+              <div style={{ width: "100%", height: 1, background: "rgba(5,150,105,0.2)", margin: "12px 0" }} />
+              <img
+                src="/CUTM%20Naac%20A+%20image.jpeg"
+                alt="NAAC A+ Grade — Centurion University"
+                style={{ height: "90px", width: "100%", objectFit: "contain", borderRadius: "12px", marginBottom: "10px" }}
+              />
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#065f46", letterSpacing: "0.5px" }}>NAAC A+ Grade</span>
             </div>
           </div>
         </div>
@@ -116,18 +125,15 @@ function AboutUniversityPage() {
             <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0f172a", margin: "0 0 10px" }}>Why CUTM?</h2>
             <p style={{ color: "#64748b", fontSize: "1rem", margin: 0 }}>A world-class institution with a global outlook and a local impact</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
             {highlights.map(({ icon, title, desc }) => (
-              <div key={title} style={{ background: "#fff", borderRadius: 16, padding: 28, boxShadow: "0 2px 16px rgba(0,0,0,.06)", border: "1px solid #e2e8f0", transition: "transform .22s,box-shadow .22s" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 32px rgba(0,0,0,.12)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 16px rgba(0,0,0,.06)"; }}
-              >
+              <motion.div key={title} variants={springItem} whileHover={{ y: -6, boxShadow: "0 14px 34px rgba(0,0,0,0.14)" }} style={{ background: "#fff", borderRadius: 16, padding: 28, boxShadow: "0 2px 16px rgba(0,0,0,.06)", border: "1px solid #e2e8f0" }}>
                 <div style={{ fontSize: "2rem", marginBottom: 14 }}>{icon}</div>
                 <h3 style={{ fontSize: "0.97rem", fontWeight: 700, color: "#0f172a", margin: "0 0 8px" }}>{title}</h3>
                 <p style={{ color: "#64748b", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Location/Venue */}
@@ -172,13 +178,13 @@ function AboutUniversityPage() {
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#fff", margin: "0 0 12px", position: "relative" }}>Join Us at CUTM</h2>
           <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>Be part of ICEEA-ICETS 2027 at one of India's premier technical universities.</p>
           <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: 12, position: "relative" }}>
-            <a href="https://www.cutm.ac.in/" target="_blank" rel="noreferrer" style={{ display: "inline-block", background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
+            <motion.a href="https://www.cutm.ac.in/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
               Visit CUTM Website
-            </a>
-            <Link to="/" style={{ display: "inline-block", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#e2e8f0", fontWeight: 600, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</Link>
+            </motion.a>
+            <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#e2e8f0", fontWeight: 600, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</MotionLink>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <Footer />
     </div>

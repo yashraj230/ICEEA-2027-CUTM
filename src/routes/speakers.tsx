@@ -1,7 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import { fadeUp, springItem, staggerParent, viewportOnce } from "../lib/motion";
 
 export const Route = createFileRoute("/speakers")({
   head: () => ({
@@ -87,7 +89,13 @@ function SpeakersPage() {
       <PageHeader />
 
       {/* Main Title Banner */}
-      <section style={{ padding: "40px 24px 20px", textAlign: "center" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        style={{ padding: "40px 24px 20px", textAlign: "center" }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
             Speakers - ICEEA-ICETS 2027
@@ -108,9 +116,10 @@ function SpeakersPage() {
               { id: "faculty", label: "Faculty Speakers" },
               { id: "student", label: "Student Presenters" },
             ].map((tab) => (
-              <button
+              <motion.button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as Speaker["category"])}
+                whileTap={{ scale: 0.95 }}
                 style={{
                   background: activeTab === tab.id ? "#166534" : "#fff",
                   color: activeTab === tab.id ? "#fff" : "#475569",
@@ -125,17 +134,27 @@ function SpeakersPage() {
                 }}
               >
                 {tab.label}
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Speaker Display Section */}
-      <section style={{ padding: "0 24px 80px" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        style={{ padding: "0 24px 80px" }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           {filteredSpeakers.length > 0 ? (
-            <div
+            <motion.div
+              variants={staggerParent}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
@@ -144,25 +163,18 @@ function SpeakersPage() {
               }}
             >
               {filteredSpeakers.map((speaker, index) => (
-                <div
+                <motion.div
                   key={speaker.name}
+                  variants={springItem}
+                  whileHover={{ y: -6, boxShadow: "0 15px 35px rgba(0,0,0,0.08)" }}
                   style={{
                     background: "#fff",
                     borderRadius: "18px",
                     overflow: "hidden",
                     border: "1px solid #e2e8f0",
                     boxShadow: "0 10px 25px rgba(0,0,0,0.03)",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     display: "flex",
                     flexDirection: "column",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-6px)";
-                    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.08)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "none";
-                    e.currentTarget.style.boxShadow = "0 10px 25px rgba(0,0,0,0.03)";
                   }}
                 >
                   {/* Portrait Area */}
@@ -194,7 +206,8 @@ function SpeakersPage() {
                         ⏱ {speaker.time} ({speaker.duration})
                       </p>
 
-                      <button
+                      <motion.button
+                        whileTap={{ scale: 0.97 }}
                         style={{
                           width: "100%",
                           background: "#166534",
@@ -211,12 +224,12 @@ function SpeakersPage() {
                         onMouseLeave={(e) => (e.currentTarget.style.background = "#166534")}
                       >
                         View Full Details
-                      </button>
+                      </motion.button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           ) : (
             <div style={{ textAlign: "center", padding: "60px 24px", background: "#fff", borderRadius: "18px", border: "1px solid #e2e8f0" }}>
               <div style={{ fontSize: "3rem", marginBottom: "16px" }}>🎤</div>
@@ -229,7 +242,7 @@ function SpeakersPage() {
             </div>
           )}
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

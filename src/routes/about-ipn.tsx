@@ -1,6 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../lib/motion";
 
 export const Route = createFileRoute("/about-ipn")({
   head: () => ({
@@ -38,7 +40,7 @@ function AboutIPNPage() {
       <PageHeader />
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg,#1a0520,#7f1d1d 50%,#0f172a)", padding: "80px 24px 90px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{ background: "linear-gradient(135deg,#1a0520,#7f1d1d 50%,#0f172a)", padding: "80px 24px 90px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -60, right: -60, width: 280, height: 280, borderRadius: "50%", background: "radial-gradient(circle,rgba(239,68,68,.12),transparent 70%)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", bottom: -80, left: -40, width: 260, height: 260, borderRadius: "50%", background: "radial-gradient(circle,rgba(52,211,153,.08),transparent 70%)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 820, margin: "0 auto" }}>
@@ -54,26 +56,26 @@ function AboutIPNPage() {
           <p style={{ marginTop: 18, color: "#94a3b8", fontSize: "1.05rem", lineHeight: 1.75 }}>
             México's leading public technological higher education institution — co-organising ICEEA-ICETS 2027 through its Centre for Interdisciplinary Studies on Environment and Development (CIIEMAD).
           </p>
-          <a href="https://www.ipn.mx/" target="_blank" rel="noreferrer"
+          <motion.a href="https://www.ipn.mx/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }}
             style={{ display: "inline-block", marginTop: 24, background: "linear-gradient(135deg,#ef4444,#b91c1c)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "12px 28px", borderRadius: 9999, textDecoration: "none" }}>
             Visit IPN Website →
-          </a>
+          </motion.a>
         </div>
-      </section>
+      </motion.section>
 
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 80px" }}>
+      <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 80px" }}>
         {/* Key Facts */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 16, marginTop: 48 }}>
+        <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 16, marginTop: 48 }}>
           {facts.map(({ icon, label, value }) => (
-            <div key={label} style={{ background: "#fff", borderRadius: 14, padding: "20px 22px", boxShadow: "0 2px 12px rgba(0,0,0,.06)", border: "1px solid #e2e8f0", display: "flex", alignItems: "flex-start", gap: 14 }}>
+            <motion.div key={label} variants={springItem} style={{ background: "#fff", borderRadius: 14, padding: "20px 22px", boxShadow: "0 2px 12px rgba(0,0,0,.06)", border: "1px solid #e2e8f0", display: "flex", alignItems: "flex-start", gap: 14 }}>
               <span style={{ fontSize: "1.5rem" }}>{icon}</span>
               <div>
                 <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase" as const, color: "#ef4444", marginBottom: 4 }}>{label}</div>
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#0f172a", lineHeight: 1.4 }}>{value}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* About IPN */}
         <div style={{ marginTop: 68 }}>
@@ -113,18 +115,15 @@ function AboutIPNPage() {
             <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0f172a", margin: "0 0 10px" }}>IPN's Contribution to ICEEA-ICETS</h2>
             <p style={{ color: "#64748b", fontSize: "1rem", margin: 0 }}>Decades of environmental research and international collaboration</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
             {pillars.map(({ icon, title, desc }) => (
-              <div key={title} style={{ background: "#fff", borderRadius: 16, padding: 28, boxShadow: "0 2px 16px rgba(0,0,0,.06)", border: "1px solid #e2e8f0", transition: "transform .22s,box-shadow .22s" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 32px rgba(0,0,0,.12)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 16px rgba(0,0,0,.06)"; }}
-              >
+              <motion.div key={title} variants={springItem} whileHover={{ y: -6, boxShadow: "0 14px 34px rgba(0,0,0,0.14)" }} style={{ background: "#fff", borderRadius: 16, padding: 28, boxShadow: "0 2px 16px rgba(0,0,0,.06)", border: "1px solid #e2e8f0" }}>
                 <div style={{ fontSize: "2rem", marginBottom: 14 }}>{icon}</div>
                 <h3 style={{ fontSize: "0.97rem", fontWeight: 700, color: "#0f172a", margin: "0 0 8px" }}>{title}</h3>
                 <p style={{ color: "#64748b", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Partnership Banner */}
@@ -152,13 +151,13 @@ function AboutIPNPage() {
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#fff", margin: "0 0 12px", position: "relative" }}>Explore the International Partnership</h2>
           <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>ICEEA-ICETS 2027 — where Mexico and India unite for global environmental science.</p>
           <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: 12, position: "relative" }}>
-            <a href="https://www.ipn.mx/" target="_blank" rel="noreferrer" style={{ display: "inline-block", background: "linear-gradient(135deg,#ef4444,#b91c1c)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
+            <motion.a href="https://www.ipn.mx/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg,#ef4444,#b91c1c)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
               Visit IPN Website
-            </a>
-            <Link to="/" style={{ display: "inline-block", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#e2e8f0", fontWeight: 600, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</Link>
+            </motion.a>
+            <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#e2e8f0", fontWeight: 600, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</MotionLink>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <Footer />
     </div>

@@ -5,7 +5,11 @@ const QUICK_LINKS = [
   { label: "Speakers", href: "/speakers" },
   { label: "Call for Papers", href: "/submissions/guidelines" },
   { label: "Registration", href: "/registration" },
+  { label: "Venue & Travel", href: "/venue-travel" },
+  { label: "Contact", href: "/contact" },
 ];
+
+const LEGAL_LINKS = ["Terms & Conditions", "Privacy Policy", "Data Security", "Copyright Policy"];
 
 function FooterLink({ label, href }: { label: string; href: string }) {
   if (href.startsWith("http")) {
@@ -16,7 +20,7 @@ function FooterLink({ label, href }: { label: string; href: string }) {
     );
   }
   return (
-    <Link to={href as any} style={linkStyle}>
+    <Link to={href as never} style={linkStyle}>
       {label}
     </Link>
   );
@@ -69,9 +73,8 @@ export default function Footer() {
                 maxWidth: 260,
               }}
             >
-              International Conference on Earth and Environment in the Anthropocene —
-              bringing together global experts to address the planet's most pressing
-              environmental challenges.
+              International Conference on Earth and Environment in Anthropocene — bringing together
+              researchers, academics and global experts.
             </p>
           </div>
 
@@ -85,22 +88,35 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Legal */}
+          <div>
+            <div style={colTitleStyle}>Legal</div>
+            <div style={{ display: "flex", flexDirection: "column", marginTop: 12 }}>
+              {LEGAL_LINKS.map((label) => (
+                <span key={label} style={{ ...linkStyle, cursor: "default" }}>
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Connect */}
           <div>
             <div style={colTitleStyle}>Connect</div>
-            <p
-              style={{
-                margin: "12px 0 0",
-                fontSize: "13px",
-                color: "#64748b",
-                lineHeight: 1.7,
-              }}
-            >
-              Visit for more
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", marginTop: 6 }}>
+            <div style={{ display: "flex", flexDirection: "column", marginTop: 12 }}>
               <a href="https://cutm.ac.in" target="_blank" rel="noreferrer" style={linkStyle}>
-                Centurion University (CUTM)
+                Website
+              </a>
+              <a href="mailto:iceea@cutm.ac.in" style={linkStyle}>
+                Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yashrajanand"
+                target="_blank"
+                rel="noreferrer"
+                style={linkStyle}
+              >
+                Social Media
               </a>
             </div>
           </div>
@@ -134,16 +150,10 @@ export default function Footer() {
         }}
       >
         <p style={{ margin: 0, fontSize: "12px", color: "#64748b" }}>
-          © {new Date().getFullYear()} - ICEEA - ICETS 2027. All rights reserved. | Designed &
-          Developed by{" "}
-          <a
-            href="https://www.linkedin.com/in/yashrajanand"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#94a3b8", fontWeight: 600, textDecoration: "none" }}
-          >
-            Yash Raj Anand
-          </a>{" "}
+          © 2027 ICEEA – ICETS. All rights reserved.
+        </p>
+        <p style={{ margin: "8px 0 0", fontSize: "12px", color: "#64748b" }}>
+          Designed and developed by{" "}
           <a
             href="https://www.linkedin.com/in/yashrajanand"
             target="_blank"
@@ -152,19 +162,23 @@ export default function Footer() {
             style={{
               display: "inline-flex",
               alignItems: "center",
-              justifyContent: "center",
-              verticalAlign: "middle",
-              width: "22px",
-              height: "22px",
-              borderRadius: "6px",
-              background: "#0a66c2",
-              color: "#fff",
+              gap: 6,
+              color: "#6ee7b7",
+              fontWeight: 600,
               textDecoration: "none",
-              transition: "background 0.2s ease",
+              verticalAlign: "middle",
             }}
           >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+            Yash Raj Anand
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              style={{ flexShrink: 0 }}
+            >
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
             </svg>
           </a>
         </p>

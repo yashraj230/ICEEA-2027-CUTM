@@ -1,4 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../lib/motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 
@@ -114,7 +116,13 @@ function ThemesPage() {
     <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui,sans-serif" }}>
       <PageHeader />
 
-      <section style={{ padding: "60px 24px" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        style={{ padding: "60px 24px" }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(1.8rem,4vw,2.5rem)", fontWeight: 800, textAlign: "center", background: "linear-gradient(135deg, #700151, #764ba2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 8 }}>Conference Themes</h1>
           <p style={{ textAlign: "center", color: "#64748b", fontSize: "1.05rem", marginBottom: 8 }}>Exploring Critical Challenges and Innovative Solutions for Our Planet's Future</p>
@@ -126,9 +134,9 @@ function ThemesPage() {
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 24 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 24 }}>
             {themes.map((theme) => (
-              <div key={theme.title} style={{ background: "#fff", borderRadius: 20, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.07)", transition: "transform 0.3s, box-shadow 0.3s", cursor: "default" }}>
+              <motion.div key={theme.title} variants={springItem} whileHover={{ y: -6, boxShadow: "0 14px 34px rgba(0,0,0,0.14)" }} style={{ background: "#fff", borderRadius: 20, overflow: "hidden", boxShadow: "0 2px 12px rgba(0,0,0,0.07)", cursor: "default" }}>
                 <div style={{ padding: "24px 24px 16px", display: "flex", alignItems: "center", gap: 12 }}>
                   <div style={{ width: 48, height: 48, borderRadius: 12, background: theme.color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.3rem", boxShadow: `0 4px 12px ${theme.color}33` }}>
                     {theme.icon}
@@ -158,15 +166,15 @@ function ThemesPage() {
                     </details>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <div style={{ textAlign: "center", marginTop: 48 }}>
-            <Link to="/" style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</Link>
+            <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</MotionLink>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

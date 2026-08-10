@@ -1,4 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { fadeUp, MotionLink, viewportOnce } from "../../lib/motion";
 import PageHeader from "../../components/PageHeader";
 import Footer from "../../components/Footer";
 
@@ -18,7 +20,7 @@ function GuidelinesPage() {
       <PageHeader />
 
       {/* Main Page Title Header */}
-      <section style={{ padding: "40px 24px 20px", textAlign: "center" }}>
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{ padding: "40px 24px 20px", textAlign: "center" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
             ICEEA-2027 &amp; ICETS-2027 — Submissions
@@ -32,10 +34,10 @@ function GuidelinesPage() {
             </span>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Content Container */}
-      <section style={{ padding: "0 24px 80px" }}>
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ padding: "0 24px 80px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           
           {/* Important Dates Block */}
@@ -129,7 +131,8 @@ function GuidelinesPage() {
             </div>
 
             <div style={{ textAlign: "center" }}>
-              <a
+              <motion.a
+                whileTap={{ scale: 0.97 }}
                 href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform"
                 target="_blank"
                 rel="noreferrer"
@@ -149,7 +152,7 @@ function GuidelinesPage() {
                 onMouseLeave={(e) => (e.currentTarget.style.background = "#166534")}
               >
                 Submit Abstract
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -194,8 +197,9 @@ function GuidelinesPage() {
 
           {/* Home Button */}
           <div style={{ textAlign: "center", marginTop: "40px" }}>
-            <Link
+            <MotionLink
               to="/"
+              whileTap={{ scale: 0.97 }}
               style={{
                 display: "inline-block",
                 background: "rgba(15,23,42,0.08)",
@@ -209,11 +213,11 @@ function GuidelinesPage() {
               }}
             >
               ← Back to Home
-            </Link>
+            </MotionLink>
           </div>
 
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

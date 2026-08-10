@@ -1,5 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { fadeUp, MotionLink, viewportOnce } from "../../lib/motion";
 import PageHeader from "../../components/PageHeader";
 import Footer from "../../components/Footer";
 
@@ -107,7 +109,7 @@ function SchedulePage() {
       <PageHeader />
 
       {/* Hero */}
-      <section style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #04281a 0%, #065f46 55%, #059669 100%)", padding: "70px 24px 110px", textAlign: "center" }}>
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #04281a 0%, #065f46 55%, #059669 100%)", padding: "70px 24px 110px", textAlign: "center" }}>
         <div style={{ position: "absolute", top: -80, right: -60, fontSize: "11rem", opacity: 0.08, animation: "floatSlow 6s ease-in-out infinite" }}>🗓️</div>
         <div style={{ position: "absolute", bottom: -50, left: -40, fontSize: "9rem", opacity: 0.08, animation: "floatSlow 7s ease-in-out infinite" }}>⏰</div>
         <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", zIndex: 1 }}>
@@ -137,15 +139,16 @@ function SchedulePage() {
         <svg style={{ position: "absolute", bottom: -2, left: 0, width: "100%", height: 60 }} viewBox="0 0 1440 60" preserveAspectRatio="none">
           <path d="M0,32 C360,80 1080,-20 1440,32 L1440,60 L0,60 Z" fill="#f8fafc" />
         </svg>
-      </section>
+      </motion.section>
 
       {/* Day selector */}
-      <section style={{ padding: "10px 24px 40px", position: "relative", zIndex: 2, marginTop: -10 }}>
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ padding: "10px 24px 40px", position: "relative", zIndex: 2, marginTop: -10 }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap", marginBottom: "40px" }}>
             {schedule.map((d) => (
-              <button
+              <motion.button
                 key={d.id}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveDay(d.id)}
                 style={{
                   display: "flex",
@@ -169,7 +172,7 @@ function SchedulePage() {
                   <span>Day {d.id}</span>
                   <span style={{ fontSize: "0.72rem", fontWeight: 600, opacity: 0.85 }}>{d.date.split(" ")[0]} {d.date.split(" ")[1]} {d.date.split(" ")[2]}</span>
                 </span>
-              </button>
+              </motion.button>
             ))}
           </div>
 
@@ -253,10 +256,10 @@ function SchedulePage() {
           </div>
 
           <div style={{ textAlign: "center", marginTop: "36px" }}>
-            <Link to="/" style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none", transition: "transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s", boxShadow: "0 6px 16px rgba(5,150,105,0.3)" }}>← Back to Home</Link>
+            <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none", transition: "transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s", boxShadow: "0 6px 16px rgba(5,150,105,0.3)" }}>← Back to Home</MotionLink>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

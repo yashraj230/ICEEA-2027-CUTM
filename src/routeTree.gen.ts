@@ -25,6 +25,7 @@ import { Route as ThemesRouteImport } from './routes/themes'
 import { Route as TourRouteImport } from './routes/tour'
 import { Route as TravelRouteImport } from './routes/travel'
 import { Route as VenueRouteImport } from './routes/venue'
+import { Route as VenueTravelRouteImport } from './routes/venue-travel'
 import { Route as VisaRouteImport } from './routes/visa'
 import { Route as ContactIndexRouteImport } from './routes/contact/index'
 import { Route as ContactAccommodationRouteImport } from './routes/contact/accommodation'
@@ -114,6 +115,11 @@ const VenueRoute = VenueRouteImport.update({
   path: '/venue',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VenueTravelRoute = VenueTravelRouteImport.update({
+  id: '/venue-travel',
+  path: '/venue-travel',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VisaRoute = VisaRouteImport.update({
   id: '/visa',
   path: '/visa',
@@ -172,6 +178,7 @@ export interface FileRoutesByFullPath {
   '/tour': typeof TourRoute
   '/travel': typeof TravelRoute
   '/venue': typeof VenueRoute
+  '/venue-travel': typeof VenueTravelRoute
   '/visa': typeof VisaRoute
   '/contact/accommodation': typeof ContactAccommodationRoute
   '/contact/directions': typeof ContactDirectionsRoute
@@ -198,6 +205,7 @@ export interface FileRoutesByTo {
   '/tour': typeof TourRoute
   '/travel': typeof TravelRoute
   '/venue': typeof VenueRoute
+  '/venue-travel': typeof VenueTravelRoute
   '/visa': typeof VisaRoute
   '/contact/accommodation': typeof ContactAccommodationRoute
   '/contact/directions': typeof ContactDirectionsRoute
@@ -225,6 +233,7 @@ export interface FileRoutesById {
   '/tour': typeof TourRoute
   '/travel': typeof TravelRoute
   '/venue': typeof VenueRoute
+  '/venue-travel': typeof VenueTravelRoute
   '/visa': typeof VisaRoute
   '/contact/accommodation': typeof ContactAccommodationRoute
   '/contact/directions': typeof ContactDirectionsRoute
@@ -253,6 +262,7 @@ export interface FileRouteTypes {
     | '/tour'
     | '/travel'
     | '/venue'
+    | '/venue-travel'
     | '/visa'
     | '/contact/accommodation'
     | '/contact/directions'
@@ -279,6 +289,7 @@ export interface FileRouteTypes {
     | '/tour'
     | '/travel'
     | '/venue'
+    | '/venue-travel'
     | '/visa'
     | '/contact/accommodation'
     | '/contact/directions'
@@ -305,6 +316,7 @@ export interface FileRouteTypes {
     | '/tour'
     | '/travel'
     | '/venue'
+    | '/venue-travel'
     | '/visa'
     | '/contact/accommodation'
     | '/contact/directions'
@@ -332,6 +344,7 @@ export interface RootRouteChildren {
   TourRoute: typeof TourRoute
   TravelRoute: typeof TravelRoute
   VenueRoute: typeof VenueRoute
+  VenueTravelRoute: typeof VenueTravelRoute
   VisaRoute: typeof VisaRoute
   ContactAccommodationRoute: typeof ContactAccommodationRoute
   ContactDirectionsRoute: typeof ContactDirectionsRoute
@@ -456,6 +469,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VenueRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/venue-travel': {
+      id: '/venue-travel'
+      path: '/venue-travel'
+      fullPath: '/venue-travel'
+      preLoaderRoute: typeof VenueTravelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/visa': {
       id: '/visa'
       path: '/visa'
@@ -532,6 +552,7 @@ const rootRouteChildren: RootRouteChildren = {
   TourRoute: TourRoute,
   TravelRoute: TravelRoute,
   VenueRoute: VenueRoute,
+  VenueTravelRoute: VenueTravelRoute,
   VisaRoute: VisaRoute,
   ContactAccommodationRoute: ContactAccommodationRoute,
   ContactDirectionsRoute: ContactDirectionsRoute,

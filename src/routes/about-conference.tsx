@@ -1,6 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../lib/motion";
 
 export const Route = createFileRoute("/about-conference")({
   head: () => ({
@@ -35,7 +37,7 @@ function AboutConferencePage() {
     <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui,sans-serif" }}>
       <PageHeader />
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg,#062b1a,#064e3b 50%,#0f172a)", padding: "80px 24px 90px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{ background: "linear-gradient(135deg,#062b1a,#064e3b 50%,#0f172a)", padding: "80px 24px 90px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -60, right: -60, width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle,rgba(52,211,153,.12),transparent 70%)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 820, margin: "0 auto" }}>
           <span style={{ display: "inline-block", background: "rgba(52,211,153,.15)", border: "1px solid rgba(52,211,153,.3)", color: "#34d399", fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase" as const, padding: "6px 18px", borderRadius: 9999, marginBottom: 22 }}>About ICEEA · ICETS 2027</span>
@@ -47,7 +49,7 @@ function AboutConferencePage() {
             The conference will feature keynote lectures by eminent scientists and presentations of peer-reviewed original research from participants worldwide. ICEEA-2027 aspires to become a landmark forum for shaping future directions in environmental resilience and sustainable development.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 80px" }} data-reveal="fade-up">
         {/* Highlights */}
@@ -85,7 +87,7 @@ function AboutConferencePage() {
             <div style={{ width: 4, height: 38, borderRadius: 4, background: "linear-gradient(180deg,#f59e0b,#f97316)", flexShrink: 0 }} />
             <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 800, color: "#0f172a", margin: 0 }}>Primary Objectives</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 16 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 16 }}>
             {[
               { icon: "💡", text: "Share groundbreaking research and transformative ideas" },
               { icon: "🤝", text: "Establish prolific partnerships across academic, scientific, and industrial sectors" },
@@ -93,12 +95,12 @@ function AboutConferencePage() {
               { icon: "🌐", text: "Create long-term global networks that drive impactful research and sustainable innovation" },
               { icon: "📡", text: "Gain exposure to cutting-edge technologies, methodologies, and international best practices" },
             ].map(({ icon, text }) => (
-              <div key={text} style={{ display: "flex", alignItems: "flex-start", gap: 14, background: "#fff", borderRadius: 14, padding: "20px 22px", boxShadow: "0 2px 12px rgba(0,0,0,.06)", border: "1px solid #e2e8f0" }}>
+              <motion.div key={text} variants={springItem} style={{ display: "flex", alignItems: "flex-start", gap: 14, background: "#fff", borderRadius: 14, padding: "20px 22px", boxShadow: "0 2px 12px rgba(0,0,0,.06)", border: "1px solid #e2e8f0" }}>
                 <span style={{ fontSize: "1.4rem", flexShrink: 0, marginTop: 2 }}>{icon}</span>
                 <p style={{ color: "#475569", fontSize: "0.93rem", lineHeight: 1.6, margin: 0 }}>{text}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* About ICETS */}
@@ -136,18 +138,15 @@ function AboutConferencePage() {
             <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0f172a", margin: "0 0 10px" }}>Conference Goals</h2>
             <p style={{ color: "#64748b", fontSize: "1rem", margin: 0 }}>Driving global dialogue towards a more sustainable future</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
             {goals.map(({ icon, title, desc }) => (
-              <div key={title} style={{ background: "#fff", borderRadius: 16, padding: 28, boxShadow: "0 2px 16px rgba(0,0,0,.06)", border: "1px solid #e2e8f0", transition: "transform .22s,box-shadow .22s" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 32px rgba(0,0,0,.12)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 16px rgba(0,0,0,.06)"; }}
-              >
+              <motion.div key={title} variants={springItem} whileHover={{ y: -6, boxShadow: "0 14px 34px rgba(0,0,0,0.14)" }} style={{ background: "#fff", borderRadius: 16, padding: 28, boxShadow: "0 2px 16px rgba(0,0,0,.06)", border: "1px solid #e2e8f0" }}>
                 <div style={{ fontSize: "2rem", marginBottom: 14 }}>{icon}</div>
                 <h3 style={{ fontSize: "0.97rem", fontWeight: 700, color: "#0f172a", margin: "0 0 8px" }}>{title}</h3>
                 <p style={{ color: "#64748b", fontSize: "0.88rem", lineHeight: 1.7, margin: 0 }}>{desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* CTA */}
@@ -156,10 +155,10 @@ function AboutConferencePage() {
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#fff", margin: "0 0 12px", position: "relative" }}>Ready to Participate?</h2>
           <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>Submit your abstract and be part of this landmark global conference.</p>
           <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: 12, position: "relative" }}>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform" target="_blank" rel="noreferrer" style={{ display: "inline-block", background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
+            <motion.a href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
               Register &amp; Submit Abstract
-            </a>
-            <Link to="/" style={{ display: "inline-block", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#e2e8f0", fontWeight: 600, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</Link>
+            </motion.a>
+            <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#e2e8f0", fontWeight: 600, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</MotionLink>
           </div>
         </div>
       </div>

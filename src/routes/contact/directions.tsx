@@ -1,4 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import type { MouseEvent } from "react";
+import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../../lib/motion";
 import PageHeader from "../../components/PageHeader";
 import Footer from "../../components/Footer";
 
@@ -18,6 +21,15 @@ const highlights = [
   { icon: "🌊", title: "Scenic Waterfalls", desc: "The region is dotted with pristine waterfalls like Devkund, Khasada, and Sanaghagara — popular destinations for nature lovers." },
   { icon: "🍍", title: "Pineapple & Cashew Belt", desc: "Gajapati is known for its abundant pineapple and cashew cultivation, contributing significantly to Odisha's horticulture." },
   { icon: "🦋", title: "Eastern Ghats Biodiversity", desc: "Lush forests, rare medicinal plants, and diverse wildlife make this one of Odisha's most ecologically rich districts." },
+];
+
+const galleryImages = [
+  { src: "https://cutm.ac.in/wp-content/uploads/2024/07/Auditorium-2-300x202-1.jpg", alt: "Centurion University Auditorium", caption: "University Auditorium" },
+  { src: "https://cutm.ac.in/wp-content/uploads/2024/07/Gymnasium-350x250-1.jpeg", alt: "Centurion University Gymnasium", caption: "Gymnasium" },
+  { src: "https://cutm.ac.in/wp-content/uploads/2024/06/i-gallery-img-1.png", alt: "Centurion University Campus", caption: "Campus View" },
+  { src: "https://cutm.ac.in/wp-content/uploads/2024/06/i-gallery-img-2.png", alt: "Centurion University Campus", caption: "Campus View" },
+  { src: "https://cutm.ac.in/wp-content/uploads/2024/06/i-gallery-img-3.png", alt: "Centurion University Campus", caption: "Campus View" },
+  { src: "https://cutm.ac.in/wp-content/uploads/2024/06/i-gallery-img-4.png", alt: "Centurion University Campus", caption: "Campus View" },
 ];
 
 const travelModes = [
@@ -65,7 +77,12 @@ function DirectionsPage() {
       <PageHeader />
 
       {/* Hero */}
-      <section style={{
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        style={{
         background: "linear-gradient(135deg, #052e1f 0%, #065f46 50%, #031810 100%)",
         padding: "80px 24px 100px",
         textAlign: "center",
@@ -84,9 +101,15 @@ function DirectionsPage() {
             Centurion University of Technology and Management · Paralakhemundi, Gajapati, Odisha
           </p>
         </div>
-      </section>
+      </motion.section>
 
-      <div style={{ maxWidth: 1000, margin: "-40px auto 0", padding: "0 24px 60px", position: "relative", zIndex: 2 }}>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        style={{ maxWidth: 1000, margin: "-40px auto 0", padding: "0 24px 60px", position: "relative", zIndex: 2 }}
+      >
 
         {/* Map */}
         <div style={{ background: "#fff", borderRadius: 20, overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.1)", marginBottom: 40 }}>
@@ -127,6 +150,35 @@ function DirectionsPage() {
           </div>
         </div>
 
+        {/* Campus Gallery */}
+        <div style={{ marginBottom: 40 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
+            <div style={{ width: 4, height: 32, borderRadius: 4, background: "linear-gradient(180deg,#047857,#34d399)", flexShrink: 0 }} />
+            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#0f172a", margin: 0 }}>
+              Campus <span style={{ background: "linear-gradient(90deg,#047857,#34d399)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Gallery</span>
+            </h2>
+          </div>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+            {galleryImages.map((img) => (
+              <motion.figure key={img.src} variants={springItem} style={{
+                margin: 0,
+                background: "#fff",
+                borderRadius: 14,
+                overflow: "hidden",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                border: "1px solid #e2e8f0",
+                transition: "transform 0.2s, box-shadow 0.2s",
+              }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)"; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.06)"; }}
+              >
+                <img src={img.src} alt={img.alt} loading="lazy" style={{ width: "100%", height: 190, objectFit: "cover", display: "block" }} />
+                <figcaption style={{ padding: "10px 16px", fontSize: "0.85rem", fontWeight: 600, color: "#334155" }}>{img.caption}</figcaption>
+              </motion.figure>
+            ))}
+          </motion.div>
+        </div>
+
         {/* About Gajapati District */}
         <div style={{ marginBottom: 40 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
@@ -138,9 +190,9 @@ function DirectionsPage() {
           <p style={{ fontSize: "0.92rem", color: "#475569", lineHeight: 1.7, marginBottom: 24 }}>
             Named after the former king of Paralakhemundi, Maharaja Krushna Chandra Gajapati, this district in southern Odisha is one of the state's most picturesque regions. Nestled in the Eastern Ghats, it offers a unique blend of natural beauty, tribal culture, and historical significance.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
             {highlights.map((h) => (
-              <div key={h.title} style={{
+              <motion.div key={h.title} variants={springItem} style={{
                 background: "#fff",
                 borderRadius: 14,
                 padding: "20px",
@@ -155,9 +207,9 @@ function DirectionsPage() {
                 <div style={{ fontSize: "1.5rem", marginBottom: 8 }}>{h.icon}</div>
                 <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0f172a", margin: "0 0 6px" }}>{h.title}</h3>
                 <p style={{ fontSize: "0.82rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>{h.desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Travelling from Bhubaneswar */}
@@ -171,9 +223,9 @@ function DirectionsPage() {
           <p style={{ fontSize: "0.92rem", color: "#475569", lineHeight: 1.7, marginBottom: 24 }}>
             Bhubaneswar to Paralakhemundi covers roughly 280–305 km. Three main travel options are available depending on your budget and schedule.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
             {travelModes.map((mode) => (
-              <div key={mode.title} style={{
+              <motion.div key={mode.title} variants={springItem} style={{
                 background: mode.bg,
                 borderRadius: 16,
                 padding: "24px",
@@ -197,14 +249,14 @@ function DirectionsPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* CTA */}
         <div style={{ textAlign: "center" }}>
-          <Link to="/" style={{
+          <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{
             display: "inline-flex", alignItems: "center", gap: 8,
             background: "linear-gradient(135deg, #047857, #065f46)",
             color: "#fff", fontWeight: 600, fontSize: 14,
@@ -213,13 +265,13 @@ function DirectionsPage() {
             boxShadow: "0 4px 16px rgba(4,120,87,0.3)",
             transition: "transform 0.2s, box-shadow 0.2s",
           }}
-            onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(4,120,87,0.4)"; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(4,120,87,0.3)"; }}
+            onMouseEnter={(e: MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(4,120,87,0.4)"; }}
+            onMouseLeave={(e: MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(4,120,87,0.3)"; }}
           >
             ← Back to Home
-          </Link>
+          </MotionLink>
         </div>
-      </div>
+      </motion.div>
 
       <Footer />
     </div>

@@ -1,5 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { fadeUp, MotionLink, staggerParent, viewportOnce } from "../lib/motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 
@@ -75,7 +77,13 @@ function FieldTripPage() {
       <PageHeader />
 
       {/* Hero */}
-      <section style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #04281a 0%, #065f46 55%, #059669 100%)", padding: "70px 24px 100px", textAlign: "center" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        style={{ position: "relative", overflow: "hidden", background: "linear-gradient(135deg, #04281a 0%, #065f46 55%, #059669 100%)", padding: "70px 24px 100px", textAlign: "center" }}
+      >
         <div style={{ position: "absolute", top: -70, right: -50, fontSize: "10rem", opacity: 0.08, animation: "floatSlow 6s ease-in-out infinite" }}>⛰️</div>
         <div style={{ position: "absolute", bottom: -50, left: -40, fontSize: "8rem", opacity: 0.08, animation: "floatSlow 7s ease-in-out infinite" }}>🪨</div>
         <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", zIndex: 1 }}>
@@ -96,10 +104,16 @@ function FieldTripPage() {
         <svg style={{ position: "absolute", bottom: -2, left: 0, width: "100%", height: 60 }} viewBox="0 0 1440 60" preserveAspectRatio="none">
           <path d="M0,32 C360,80 1080,-20 1440,32 L1440,60 L0,60 Z" fill="#f8fafc" />
         </svg>
-      </section>
+      </motion.section>
 
       {/* Main content */}
-      <section style={{ padding: "20px 24px 70px" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        style={{ padding: "20px 24px 70px" }}
+      >
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
           {/* Excursion intro */}
           <div data-reveal="fade-up" style={{ background: "#fff", borderRadius: 18, border: "1px solid #e2e8f0", boxShadow: "0 6px 20px rgba(0,0,0,0.05)", padding: "32px 28px", marginBottom: 36 }}>
@@ -143,7 +157,7 @@ function FieldTripPage() {
           </div>
 
           {/* Gallery */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px", marginBottom: 36 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px", marginBottom: 36 }}>
             {galleries.map((g, i) => (
               <figure key={g.src} data-reveal="fade-up" className={`stagger-${i + 1}`} style={{ margin: 0, background: "#fff", borderRadius: 16, overflow: "hidden", border: "1px solid #e2e8f0", boxShadow: "0 6px 20px rgba(0,0,0,0.05)" }}>
                 <div style={{ height: 200, overflow: "hidden" }}>
@@ -152,13 +166,13 @@ function FieldTripPage() {
                 <figcaption style={{ padding: "14px 16px", fontSize: "0.82rem", color: "#475569", lineHeight: 1.55 }}>{g.caption}</figcaption>
               </figure>
             ))}
-          </div>
+          </motion.div>
 
           {/* Additional info */}
           <h3 data-reveal="fade-up" style={{ fontSize: "1.3rem", fontWeight: 800, color: "#0f172a", textAlign: "center", margin: "0 0 20px" }}>
             Additional Information
           </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px", marginBottom: 36 }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px", marginBottom: 36 }}>
             {infoBlocks.map((b, i) => (
               <div key={b.title} data-reveal="fade-up" className={`stagger-${i + 1}`} style={{ background: "#fff", borderRadius: 16, border: "1px solid #e2e8f0", boxShadow: "0 6px 20px rgba(0,0,0,0.05)", padding: "24px", transition: "transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s" }} onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-5px)"; e.currentTarget.style.boxShadow = "0 14px 30px rgba(0,0,0,0.09)"; }} onMouseLeave={(e) => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.05)"; }}>
                 <div style={{ fontSize: "2rem", marginBottom: "10px" }}>{b.icon}</div>
@@ -166,13 +180,13 @@ function FieldTripPage() {
                 <p style={{ fontSize: "0.87rem", color: "#475569", margin: 0, lineHeight: 1.65 }}>{b.text}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
 
           <div style={{ textAlign: "center" }}>
-            <Link to="/" style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none", boxShadow: "0 6px 16px rgba(5,150,105,0.3)" }}>← Back to Home</Link>
+            <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none", boxShadow: "0 6px 16px rgba(5,150,105,0.3)" }}>← Back to Home</MotionLink>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

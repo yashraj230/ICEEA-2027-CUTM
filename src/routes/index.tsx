@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
+import { RevealSection } from "../lib/motion";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -115,6 +117,11 @@ function Hero() {
               <p className="text-base font-semibold text-emerald-100 mt-1 text-center max-w-lg">
                 Department of Civil Engineering, School of Engineering and Technology
               </p>
+              <img
+                src="/CUTM%20Naac%20A+%20image.jpeg"
+                alt="NAAC A+ Grade — Centurion University of Technology and Management"
+                className="mt-3 h-24 sm:h-28 w-auto object-contain rounded-xl shadow-2xl ring-2 ring-white/70 bg-white/95 backdrop-blur-md px-4 py-3 transition-transform duration-300 hover:scale-[1.04]"
+              />
             </div>
           </div>
 
@@ -154,36 +161,40 @@ function Hero() {
         </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a
+          <motion.a
             href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform"
             target="_blank"
             rel="noreferrer"
+            whileTap={{ scale: 0.97 }}
             className="rounded-full bg-gradient-to-r from-emerald-600 to-lime-600 px-7 py-3.5 font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 shimmer-btn"
           >
             Register &amp; Submit Abstract
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://forms.gle/8C49wv5vnYmVAwq5A"
             target="_blank"
             rel="noreferrer"
+            whileTap={{ scale: 0.97 }}
             className="rounded-full bg-white px-7 py-3.5 font-bold text-slate-900 shadow-md transition-all duration-300 hover:scale-105 hover:bg-slate-100"
           >
             Registration Fee
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#"
+            whileTap={{ scale: 0.97 }}
             className="rounded-full bg-gradient-to-r from-emerald-800 to-green-800 px-7 py-3.5 font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-emerald-800/40 shimmer-btn"
           >
             Download Brochure
-          </a>
+          </motion.a>
         </div>
 
         {/* Slide Indicators */}
         <div className="mt-8 flex justify-center gap-2">
           {images.map((_, idx) => (
-            <button
+            <motion.button
               key={idx}
               onClick={() => setCurrentIdx(idx)}
+              whileTap={{ scale: 0.75 }}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 idx === currentIdx ? "w-8 bg-lime-400" : "w-2.5 bg-white/40 hover:bg-white/70"
               }`}
@@ -289,7 +300,7 @@ const dates = [
 
 function ImportantDates() {
   return (
-    <section
+    <RevealSection
       id="dates"
       style={{
         background: "linear-gradient(180deg, #ffffff 0%, #f0fdf4 45%, #ecfdf5 100%)",
@@ -462,7 +473,7 @@ function ImportantDates() {
           ))}
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -481,7 +492,7 @@ const announcements: AnnouncementItem[] = [
 
 function Announcements() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-green-950 to-emerald-900 py-20">
+    <RevealSection className="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-green-950 to-emerald-900 py-20">
       {/* Decorative blobs */}
       <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-gradient-to-br from-emerald-500/10 to-green-500/5 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-gradient-to-br from-lime-500/10 to-emerald-500/5 blur-3xl" />
@@ -536,13 +547,13 @@ function Announcements() {
           })}
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
 function About() {
   return (
-    <section id="about" className="py-16">
+    <RevealSection id="about" className="py-16">
       <div className="mx-auto max-w-5xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">
           About ICEEA - ICETS 2027
@@ -597,7 +608,7 @@ function About() {
           </ul>
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -710,7 +721,7 @@ function Themes() {
   const visibleCount = 5;
 
   return (
-    <section id="themes" className="bg-slate-50 py-16">
+    <RevealSection id="themes" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-7xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl md:text-4xl font-bold text-emerald-900">
           Conference Themes
@@ -762,8 +773,9 @@ function Themes() {
                     </div>
                   )}
                   {hidden.length > 0 && (
-                    <button
+                    <motion.button
                       onClick={() => setOpenIndex(isOpen ? null : i)}
+                      whileTap={{ scale: 0.95 }}
                       className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200 transition hover:bg-emerald-100 active:scale-95"
                       aria-expanded={isOpen}
                     >
@@ -773,7 +785,7 @@ function Themes() {
                       >
                         ▾
                       </span>
-                    </button>
+                    </motion.button>
                   )}
                 </div>
               </div>
@@ -781,7 +793,7 @@ function Themes() {
           })}
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -795,7 +807,7 @@ function DatesTable() {
     ["Conference dates", "8th – 10th November, 2027"],
   ];
   return (
-    <section className="py-16">
+    <RevealSection className="py-16">
       <div className="mx-auto max-w-4xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">
           Important Dates to Remember
@@ -819,7 +831,7 @@ function DatesTable() {
           </table>
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -840,7 +852,7 @@ function Fees() {
     ["Accompanying Guest (National)", "INR ₹1000.00", "INR ₹1500.00"],
   ];
   return (
-    <section id="fees" className="bg-slate-50 py-16">
+    <RevealSection id="fees" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-5xl px-4 space-y-12">
         <div data-reveal="fade-up">
           <h2 className="text-center text-3xl font-bold text-emerald-900">
@@ -910,13 +922,13 @@ function Fees() {
             <p className="font-semibold">⚠️ Important Note:</p>
             <p className="text-sm text-slate-700 mt-1">
               Dates are final but subject to change. Authors are advised to check the website
-              regularly for updates and confirm travel plans only after visa approval and
+              regularly for updates and confirm               travel plans only after visa approval and
               registration.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -946,7 +958,7 @@ const conveners = [
 
 function Conveners() {
   return (
-    <section className="py-16">
+    <RevealSection className="py-16">
       <div className="mx-auto max-w-6xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">
           Contact for Visa & Conference Correspondence
@@ -970,13 +982,13 @@ function Conveners() {
           ))}
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
 function Guidelines() {
   return (
-    <section id="guidelines" className="bg-slate-50 py-16">
+    <RevealSection id="guidelines" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-4xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">
           Abstract Submission Guidelines
@@ -1034,13 +1046,13 @@ function Guidelines() {
           </div>
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
 function Partners() {
   return (
-    <section id="partners" className="py-16">
+    <RevealSection id="partners" className="py-16">
       <div className="mx-auto max-w-6xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">Our Organizing Partners</h2>
         <div className="mt-10 grid gap-10 md:grid-cols-2 items-center">
@@ -1107,7 +1119,7 @@ function Partners() {
           </div>
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -1181,7 +1193,7 @@ function Committee() {
   const [tab, setTab] = useState(0);
   const tabs = ["Chief Patrons / Co-Patrons & Convenors", "Organizing Team", "Scientific Committee"];
   return (
-    <section id="committee" className="bg-slate-50 py-16">
+    <RevealSection id="committee" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-6xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-4xl font-bold text-emerald-900">ICEEA - ICETS 2027</h2>
         <p data-reveal="fade-up" className="mt-2 text-center text-xl text-slate-700">Conference Committee</p>
@@ -1191,9 +1203,10 @@ function Committee() {
 
         <div data-reveal="fade-up" className="mt-8 flex flex-wrap justify-center gap-2">
           {tabs.map((t, i) => (
-            <button
+            <motion.button
               key={t}
               onClick={() => setTab(i)}
+              whileTap={{ scale: 0.95 }}
               className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
                 tab === i
                   ? "bg-emerald-700 text-white"
@@ -1201,7 +1214,7 @@ function Committee() {
               }`}
             >
               {t}
-            </button>
+            </motion.button>
           ))}
         </div>
 
@@ -1230,13 +1243,13 @@ function Committee() {
           ))}
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
 function TechPartner() {
   return (
-    <section className="py-16">
+    <RevealSection className="py-16">
       <div className="mx-auto max-w-5xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">
           Technology Partner & Innovation Ecosystem
@@ -1279,13 +1292,13 @@ function TechPartner() {
             <h4 className="mt-1 text-xl font-bold">Bandaru Savithri</h4>
             <p className="mt-2 text-sm text-slate-600">
               Co-Sponsor for ICEEA - 2025. Strategic Leader | Research Governance | Innovation
-              Policy. Provides leadership in institutional strategy and international
+              Policy. Provides leadership in institutional strategy and               international
               collaborations.
             </p>
           </div>
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -1322,7 +1335,7 @@ function Contact() {
   ];
 
   return (
-    <section id="contact" className="bg-emerald-900 py-16 text-white">
+    <RevealSection id="contact" className="bg-emerald-900 py-16 text-white">
       <div className="mx-auto max-w-6xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold">Contact Us</h2>
         <p data-reveal="fade-up" className="mt-2 text-center text-emerald-200/70 text-sm">
@@ -1378,20 +1391,21 @@ function Contact() {
                 <p className="mt-1 text-sm text-emerald-100/80">
                   Paralakhemundi, Odisha · India
                 </p>
-                <a
+                <motion.a
                   href="https://www.cutm.ac.in/"
                   target="_blank"
                   rel="noreferrer"
+                  whileTap={{ scale: 0.97 }}
                   className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-emerald-500 animate-pulse-glow"
                 >
                   Visit Official Website
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </RevealSection>
   );
 }
 
@@ -1453,23 +1467,25 @@ function AnnouncementModal() {
                 <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">New Deadline</span>
                 <span className="text-xs font-extrabold text-emerald-600">31 July 2026</span>
               </span>
-              <button
+              <motion.button
                 onClick={() => setOpen(false)}
+                whileTap={{ scale: 0.95 }}
                 className="rounded-full bg-gradient-to-r from-emerald-500 to-green-600 px-4 py-1.5 text-[11px] font-bold text-white shadow-md transition hover:brightness-110 active:scale-[0.98]"
               >
                 Got it
-              </button>
+              </motion.button>
             </div>
           </div>
 
           {/* Close button — clearly visible */}
-          <button
+          <motion.button
             onClick={() => setOpen(false)}
+            whileTap={{ scale: 0.9 }}
             className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-slate-800 text-sm font-bold text-white shadow-md transition hover:bg-slate-900 active:scale-95"
             aria-label="Close announcement"
           >
             ✕
-          </button>
+          </motion.button>
         </div>
       </div>
     </div>,

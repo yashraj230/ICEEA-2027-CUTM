@@ -1,6 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../lib/motion";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -128,7 +130,13 @@ function AboutPage() {
       <PageHeader />
 
       {/* Hero Banner Section */}
-      <section style={{ background: "linear-gradient(135deg, #eefcf3 0%, #dbf8e7 100%)", padding: "40px 24px 20px" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        style={{ background: "linear-gradient(135deg, #eefcf3 0%, #dbf8e7 100%)", padding: "40px 24px 20px" }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
             ABOUT ICEEA - ICETS 2027
@@ -139,8 +147,9 @@ function AboutPage() {
 
           {/* Action Tabs / Buttons */}
           <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap", marginBottom: "20px" }}>
-            <Link
+            <MotionLink
               to="/about"
+              whileTap={{ scale: 0.97 }}
               style={{
                 background: "#0d8a57",
                 color: "#fff",
@@ -153,9 +162,10 @@ function AboutPage() {
               }}
             >
               About Conference
-            </Link>
-            <Link
+            </MotionLink>
+            <MotionLink
               to="/about-university"
+              whileTap={{ scale: 0.97 }}
               style={{
                 background: "#fff",
                 color: "#475569",
@@ -168,9 +178,10 @@ function AboutPage() {
               }}
             >
               Centurion University of Technology and Management
-            </Link>
-            <Link
+            </MotionLink>
+            <MotionLink
               to="/about-ipn"
+              whileTap={{ scale: 0.97 }}
               style={{
                 background: "#fff",
                 color: "#475569",
@@ -183,13 +194,19 @@ function AboutPage() {
               }}
             >
               IPN Mexico
-            </Link>
+            </MotionLink>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Main Content Card Container */}
-      <section style={{ padding: "0 24px 60px" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        style={{ padding: "0 24px 60px" }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div
             style={{
@@ -394,7 +411,11 @@ function AboutPage() {
               </div>
 
               {/* Grid of Themes Cards */}
-              <div
+              <motion.div
+                variants={staggerParent}
+                initial="hidden"
+                whileInView="show"
+                viewport={viewportOnce}
                 style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fill, minmax(310px, 1fr))",
@@ -402,15 +423,16 @@ function AboutPage() {
                 }}
               >
                 {themes.map((theme) => (
-                  <div
+                  <motion.div
                     key={theme.title}
+                    variants={springItem}
+                    whileHover={{ y: -6, boxShadow: "0 14px 34px rgba(0,0,0,0.14)" }}
                     style={{
                       background: "#fff",
                       borderRadius: "20px",
                       overflow: "hidden",
                       boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
                       border: "1px solid #f1f5f9",
-                      transition: "transform 0.3s, box-shadow 0.3s",
                     }}
                   >
                     {/* Theme Image */}
@@ -482,8 +504,9 @@ function AboutPage() {
                         ))}
                       </ul>
                       {theme.areas.length > 3 && (
-                        <Link
+                        <MotionLink
                           to="/themes"
+                          whileTap={{ scale: 0.97 }}
                           style={{
                             display: "inline-block",
                             marginTop: "12px",
@@ -495,16 +518,20 @@ function AboutPage() {
                           }}
                         >
                           + View More Areas
-                        </Link>
+                        </MotionLink>
                       )}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
 
             {/* Conference Dates Info Box */}
-            <div
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
               style={{
                 background: "linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%)",
                 borderRadius: "16px",
@@ -523,10 +550,14 @@ function AboutPage() {
               <p style={{ fontSize: "0.95rem", color: "#334155", margin: 0, fontWeight: 550 }}>
                 Centurion University of Technology and Management, Paralakhemundi, Odisha, India
               </p>
-            </div>
+            </motion.div>
 
             {/* Organized by Box */}
-            <div
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
               style={{
                 background: "linear-gradient(135deg, #0f2d20 0%, #0d1e16 100%)",
                 borderRadius: "18px",
@@ -571,11 +602,12 @@ function AboutPage() {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             <div style={{ textAlign: "center", marginTop: "35px" }}>
-              <Link
+              <MotionLink
                 to="/"
+                whileTap={{ scale: 0.97 }}
                 style={{
                   display: "inline-block",
                   background: "linear-gradient(135deg, #0d8a57, #0b6943)",
@@ -589,11 +621,11 @@ function AboutPage() {
                 }}
               >
                 ← Back to Home
-              </Link>
+              </MotionLink>
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

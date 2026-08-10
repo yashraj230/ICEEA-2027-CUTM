@@ -1,6 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import { fadeUp, MotionLink, viewportOnce } from "../lib/motion";
 
 export const Route = createFileRoute("/important-dates")({
   head: () => ({
@@ -16,7 +18,7 @@ function ImportantDatesPage() {
     <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui,sans-serif" }}>
       <PageHeader />
 
-      <section style={{ padding: "60px 24px" }}>
+      <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ padding: "60px 24px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0f172a", textAlign: "center", marginBottom: 32 }}>Important Dates to Remember</h2>
 
@@ -118,10 +120,10 @@ function ImportantDatesPage() {
           </div>
 
           <div style={{ textAlign: "center" }}>
-            <Link to="/" style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</Link>
+            <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg, #059669, #047857)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</MotionLink>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

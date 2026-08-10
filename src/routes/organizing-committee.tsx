@@ -1,5 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../lib/motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 
@@ -167,7 +169,7 @@ const coConveners: Member[] = [
 function CommitteeTabs() {
   return (
     <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap", marginBottom: "35px" }}>
-      <button
+      <motion.button
         style={{
           background: "#166534",
           color: "#fff",
@@ -179,10 +181,11 @@ function CommitteeTabs() {
           cursor: "pointer",
           boxShadow: "0 4px 10px rgba(22,101,52,0.25)",
         }}
+        whileTap={{ scale: 0.95 }}
       >
         Chief Patrons / Co-Patrons &amp; Conveners
-      </button>
-      <button
+      </motion.button>
+      <motion.button
         style={{
           background: "#fff",
           color: "#475569",
@@ -193,10 +196,11 @@ function CommitteeTabs() {
           border: "1px solid #cbd5e1",
           cursor: "pointer",
         }}
+        whileTap={{ scale: 0.95 }}
       >
         Organizing Team
-      </button>
-      <button
+      </motion.button>
+      <motion.button
         style={{
           background: "#fff",
           color: "#475569",
@@ -207,9 +211,10 @@ function CommitteeTabs() {
           border: "1px solid #cbd5e1",
           cursor: "pointer",
         }}
+        whileTap={{ scale: 0.95 }}
       >
         Scientific Committee
-      </button>
+      </motion.button>
     </div>
   );
 }
@@ -366,7 +371,13 @@ function OrganizingCommitteePage() {
       <PageHeader />
 
       {/* Header Title Section */}
-      <section style={{ padding: "40px 24px 20px", textAlign: "center" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        style={{ padding: "40px 24px 20px", textAlign: "center" }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
             ICEEA - ICETS 2027
@@ -380,47 +391,62 @@ function OrganizingCommitteePage() {
 
           <CommitteeTabs />
         </div>
-      </section>
+      </motion.section>
 
       {/* Main Committee Cards Section */}
-      <section style={{ padding: "0 24px 80px" }}>
+      <motion.section
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        style={{ padding: "0 24px 80px" }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           {/* Chief Patrons */}
           <SectionTitle title="Chief Patrons" />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
             {chiefPatrons.map((member) => (
-              <MemberCard key={member.name} member={member} />
+              <motion.div key={member.name} variants={springItem}>
+                <MemberCard member={member} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Co-Patrons */}
           <SectionTitle title="Co-Patrons" />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
             {coPatrons.map((member) => (
-              <MemberCard key={member.name} member={member} />
+              <motion.div key={member.name} variants={springItem}>
+                <MemberCard member={member} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Conveners */}
           <SectionTitle title="Conference Conveners &amp; Coordinator" />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
             {conveners.map((member) => (
-              <MemberCard key={member.name} member={member} />
+              <motion.div key={member.name} variants={springItem}>
+                <MemberCard member={member} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Co-Conveners */}
           <SectionTitle title="Co-Conveners" />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
+          <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))", gap: "24px", marginBottom: "40px" }}>
             {coConveners.map((member) => (
-              <MemberCard key={member.name} member={member} />
+              <motion.div key={member.name} variants={springItem}>
+                <MemberCard member={member} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Home Button */}
           <div style={{ textAlign: "center", marginTop: "50px" }}>
-            <Link
+            <MotionLink
               to="/"
+              whileTap={{ scale: 0.97 }}
               style={{
                 display: "inline-block",
                 background: "linear-gradient(135deg, #166534, #14532d)",
@@ -434,10 +460,10 @@ function OrganizingCommitteePage() {
               }}
             >
               ← Back to Home
-            </Link>
+            </MotionLink>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>
