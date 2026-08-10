@@ -1247,61 +1247,6 @@ function Committee() {
   );
 }
 
-function TechPartner() {
-  return (
-    <RevealSection className="py-16">
-      <div className="mx-auto max-w-5xl px-4">
-        <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">
-          Technology Partner & Innovation Ecosystem
-        </h2>
-        <p data-reveal="fade-up" className="mt-2 text-center text-slate-600">
-          Driving global research, deep-tech innovation, and next-generation technology ecosystems.
-        </p>
-
-        <div data-reveal="scale-in" className="mt-10 rounded-2xl bg-gradient-to-br from-emerald-950 to-emerald-800 p-8 text-white card-hover">
-          <h3 className="text-2xl font-bold">Olewin – Global Deep Tech & Innovation Group</h3>
-          <p className="mt-4 leading-relaxed text-emerald-100">
-            <b>Olewin</b> is a forward-looking global technology and research group dedicated to
-            advancing innovation across frontier scientific and engineering domains. The
-            organization operates at the intersection of <b>quantum computing, space technology,
-            deep-tech research, artificial intelligence, advanced energy systems,</b> and emerging
-            scientific breakthroughs.
-          </p>
-          <ul className="mt-4 grid gap-2 sm:grid-cols-2 text-sm">
-            <li>• Quantum Technologies & Computational Science</li>
-            <li>• Space Science, Exploration & Aerospace Innovation</li>
-            <li>• Artificial Intelligence & Advanced Computing</li>
-            <li>• Next-Generation Energy & Sustainable Technologies</li>
-            <li>• Global Research, Education & Technology Transfer</li>
-          </ul>
-        </div>
-
-        <h3 data-reveal="fade-up" className="mt-12 text-2xl font-bold text-emerald-900">Leadership</h3>
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <div data-reveal="fade-up" className="rounded-xl bg-white p-6 shadow-sm border card-hover stagger-1">
-            <p className="text-sm font-semibold text-emerald-700">Founder & CEO</p>
-            <h4 className="mt-1 text-xl font-bold">Bandaru Mahesh</h4>
-            <p className="mt-2 text-sm text-slate-600">
-              IIT Kharagpur Alumnus | Research Innovator | Core Architect of Global Technology &
-              Research Initiatives. Visionary leader driving Olewin's mission in quantum
-              innovation, space research, and global scientific advancement.
-            </p>
-          </div>
-          <div data-reveal="fade-up" className="rounded-xl bg-white p-6 shadow-sm border card-hover stagger-2">
-            <p className="text-sm font-semibold text-emerald-700">Director & Chairperson</p>
-            <h4 className="mt-1 text-xl font-bold">Bandaru Savithri</h4>
-            <p className="mt-2 text-sm text-slate-600">
-              Co-Sponsor for ICEEA - 2025. Strategic Leader | Research Governance | Innovation
-              Policy. Provides leadership in institutional strategy and               international
-              collaborations.
-            </p>
-          </div>
-        </div>
-      </div>
-    </RevealSection>
-  );
-}
-
 function Contact() {
   const contactInfo = [
     {
@@ -1523,7 +1468,6 @@ function Home() {
       <Guidelines />
       <Partners />
       <Committee />
-      <TechPartner />
       <Contact />
       <Footer />
       <AnnouncementModal />    </div>

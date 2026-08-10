@@ -56,7 +56,6 @@ const nav: NavItem[] = [
       ["Directions & Map", "/contact/directions"],
       ["Accommodation", "/contact/accommodation"],
       ["Venue & Travel", "/venue-travel"],
-      ["Developer Site / Technical Support", "https://olewintechsolutions.com"],
     ],
   },
 ];
