@@ -1364,15 +1364,15 @@ function Contact() {
 
           {/* Centurion University image — animated container */}
           <div data-reveal="fade-right" className="flex items-stretch">
-            <div className="group relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+            <div className="group relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl min-h-[240px] sm:min-h-0">
               <img
                 src="/Centurion University Full Image..png"
                 alt="Centurion University Campus"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="text-lg font-extrabold text-white">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                <div className="max-w-[15rem] text-base font-extrabold leading-tight text-white sm:max-w-none sm:text-lg">
                   Centurion University of Technology and Management
                 </div>
                 <p className="mt-1 text-sm text-emerald-100/80">
