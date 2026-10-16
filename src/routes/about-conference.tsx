@@ -18,12 +18,11 @@ export const Route = createFileRoute("/about-conference")({
 
 function AboutConferencePage() {
   const goals = [
-    { icon: "🌍", title: "Address Anthropocene Challenges", desc: "Tackle complex Earth and environmental challenges emerging in the Anthropocene epoch with innovative scientific solutions." },
-    { icon: "🤝", title: "International Collaboration", desc: "Strengthen scientific collaboration between nations for sustainable environmental governance and resilient socio-ecological systems." },
-    { icon: "🔬", title: "Interdisciplinary Research", desc: "Promote interdisciplinary dialogue across geosciences, environmental policy, technology, and social dimensions." },
-    { icon: "💡", title: "Innovative Solutions", desc: "Exchange cutting-edge research in climate change, geology, biodiversity, energy, and territorial studies." },
-    { icon: "🌱", title: "Sustainable Development", desc: "Advance geo-environmental solutions and promote sustainable development practices globally." },
-    { icon: "📜", title: "Policy Integration", desc: "Bridge the gap between scientific findings and actionable environmental policy for measurable real-world impact." },
+    { icon: "🌍", title: "Address Anthropocene Challenges", desc: "Address global environmental challenges of the Anthropocene with innovative scientific solutions." },
+    { icon: "🤝", title: "International Collaboration", desc: "Strengthen international collaboration in Earth and environmental sciences for sustainable governance." },
+    { icon: "🌱", title: "Sustainable Development", desc: "Promote sustainable development and geo-environmental solutions worldwide." },
+    { icon: "📜", title: "Policy & Technology Integration", desc: "Integrate geoscience, environmental policy, and advanced technology for real-world impact." },
+    { icon: "💡", title: "Cutting-Edge Research Exchange", desc: "Exchange cutting-edge research in climate change, geology, biodiversity, energy, and territorial studies." },
   ];
   const highlights = [
     { icon: "📅", label: "Conference Dates", value: "November 8–12, 2027" },

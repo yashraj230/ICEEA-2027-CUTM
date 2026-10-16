@@ -31,7 +31,7 @@ function RegistrationPage() {
             Click below Button to Submit the Registration form & Fee Payment Details...
           </p>
           <motion.a href="https://forms.gle/WZW2CrWhMZet1wep8" target="_blank" rel="noopener noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg, #268736, #a51056)", color: "#fff", padding: "14px 32px", borderRadius: 8, fontWeight: 600, fontSize: 14, textDecoration: "none", boxShadow: "0 4px 15px rgba(13,110,253,0.3)", marginBottom: 32 }}>
-            Registration Fee form for Conference
+            Registration Form for Conference
           </motion.a>
           <br/>
           <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "rgba(15,23,42,0.08)", border: "1px solid rgba(15,23,42,0.15)", color: "#0f172a", fontWeight: 600, fontSize: 14, padding: "12px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</MotionLink>

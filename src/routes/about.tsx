@@ -335,11 +335,11 @@ function AboutPage() {
               </h2>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {[
-                  "Address global environmental concerns of the Anthropocene.",
-                  "Strengthen international scientific collaborations.",
-                  "Promote sustainable development and environmental governance.",
-                  "Integrate geosciences and environmental policy implementation.",
-                  "Encourage cutting-edge research in climate change geology, biodiversity, energy, and water resources.",
+                  "Address global environmental challenges of the Anthropocene",
+                  "Strengthen international collaboration in Earth and environmental sciences",
+                  "Promote sustainable development and geo-environmental solutions",
+                  "Integrate geoscience, environmental policy, and technology",
+                  "Exchange cutting-edge research in climate change, geology, biodiversity, energy, and territorial studies",
                 ].map((text, i) => (
                   <li
                     key={i}

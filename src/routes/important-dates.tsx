@@ -58,14 +58,12 @@ function ImportantDatesPage() {
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <tbody>
                 {[
-                  ["Bank Name", "Canara Bank"],
-                  ["Bank Address", "Kadaganchi Branch, Gulbarga District, Karnataka, India"],
-                  ["Account Number", "5109101000001"],
-                  ["Account Name", "Central University of Karnataka"],
-                  ["IFSC", "CNRB0005109"],
-                  ["MICR", "585015520"],
+                  ["Bank Name", "To be announced"],
+                  ["Bank Address", "Paralakhemundi, Odisha, India"],
+                  ["Account Name", "Centurion University of Technology and Management"],
+                  ["Details", "Available in the official registration portal"],
                 ].map(([label, value], i) => (
-                  <tr key={label} style={{ borderBottom: i < 5 ? "1px solid #e2e8f0" : "none" }}>
+                  <tr key={label} style={{ borderBottom: i < 3 ? "1px solid #e2e8f0" : "none" }}>
                     <td style={{ padding: "12px 16px", fontWeight: 700, color: "#64748b", fontSize: "0.9rem", width: "40%" }}>{label}</td>
                     <td style={{ padding: "12px 16px", fontWeight: 600, color: "#0f172a", fontSize: "0.9rem" }}>{value}</td>
                   </tr>
@@ -106,11 +104,24 @@ function ImportantDatesPage() {
             </table>
           </div>
 
-          <div style={{ background: "linear-gradient(135deg, #fef3c7, #fde68a)", borderLeft: "4px solid #f59e0b", borderRadius: 12, padding: "16px 20px", marginBottom: 24 }}>
-            <h5 style={{ fontWeight: 700, margin: "0 0 8px", color: "#92400e" }}>Important Note:</h5>
-            <p style={{ margin: 0, fontSize: "0.9rem", color: "#78350f", lineHeight: 1.6 }}>
-              <strong>Dates are final but subject to change.</strong> Authors are advised to check the website regularly for updates and confirm travel plans only after visa approval and registration.
+          {/* Field Trip Registration Fee */}
+          <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 2px 12px rgba(0,0,0,0.08)", padding: 24, marginBottom: 48 }}>
+            <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#064e3b", marginBottom: 12 }}>
+              Field Trip Registration Fee (11–12 November 2027)
+            </h3>
+            <p style={{ color: "#475569", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: 20 }}>
+              The field trip is designed to bridge theoretical knowledge with real-world geological and environmental applications. It enhances observational skills, field-based analysis, and interdisciplinary understanding.
             </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+              <div style={{ background: "#ecfdf5", border: "1px solid #a7f3d0", borderRadius: 10, padding: "16px 20px" }}>
+                <div style={{ fontWeight: 700, color: "#064e3b", fontSize: "0.9rem" }}>Indian Participants</div>
+                <div style={{ fontSize: "1.3rem", fontWeight: 800, color: "#047857", marginTop: 4 }}>INR ₹3000/-</div>
+              </div>
+              <div style={{ background: "#ecfdf5", border: "1px solid #a7f3d0", borderRadius: 10, padding: "16px 20px" }}>
+                <div style={{ fontWeight: 700, color: "#064e3b", fontSize: "0.9rem" }}>International Participants</div>
+                <div style={{ fontSize: "1.3rem", fontWeight: 800, color: "#047857", marginTop: 4 }}>USD $ 50.00</div>
+              </div>
+            </div>
           </div>
 
           <div style={{ textAlign: "center" }}>

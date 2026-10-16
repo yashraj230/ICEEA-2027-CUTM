@@ -924,14 +924,6 @@ function Fees() {
               <div className="mt-1 text-lg font-bold">USD $ 50.00</div>
             </div>
           </div>
-          <div className="mt-6 rounded-lg border-l-4 border-amber-500 bg-amber-50 p-4">
-            <p className="font-semibold">⚠️ Important Note:</p>
-            <p className="text-sm text-slate-700 mt-1">
-              Dates are final but subject to change. Authors are advised to check the website
-              regularly for updates and confirm               travel plans only after visa approval and
-              registration.
-            </p>
-          </div>
         </div>
       </div>
     </RevealSection>
@@ -1222,32 +1214,32 @@ const committee: { title: string; members: Member[] }[] = [
     members: [
       {
         name: "Dr. Madan Rout",
-        role: "Faculty Member",
-        org: "Dept. of Civil Engineering, CUTM",
+        role: "Dept. of Civil Engineering",
+        org: "Centurion University of Technology and Management, Odisha - India",
         country: "India",
       },
       {
         name: "Dr. Krushna Chandra Sethi",
-        role: "Faculty Member",
-        org: "Dept. of Civil Engineering, CUTM",
+        role: "Dept. of Civil Engineering",
+        org: "Centurion University of Technology and Management, Odisha - India",
         country: "India",
       },
       {
         name: "Dr. Aurobinda Bag",
-        role: "Faculty Member",
-        org: "Dept. of Electrical Engineering, CUTM",
+        role: "Dept. of Electrical Engineering",
+        org: "Centurion University of Technology and Management, Odisha - India",
         country: "India",
       },
       {
         name: "Prof. B. Bikram Narayan",
-        role: "Faculty Member",
-        org: "Dept. of Civil Engineering, CUTM",
+        role: "Dept. of Civil Engineering",
+        org: "Centurion University of Technology and Management, Odisha - India",
         country: "India",
       },
       {
         name: "Prof. Dwity Sundar Rout",
-        role: "Faculty Member",
-        org: "Dept. of Agricultural Extension Education, CUTM",
+        role: "Dept. of Agricultural Extension Education",
+        org: "Centurion University of Technology and Management, Odisha - India",
         country: "India",
       },
     ],
