@@ -121,11 +121,11 @@ function SchedulePage() {
             ICSEECA – ICETS 2027 · Centurion University of Technology and Management
           </p>
           <p style={{ fontSize: "0.95rem", color: "#a7f3d0", margin: "0 auto 28px", maxWidth: 620, lineHeight: 1.7 }}>
-            Three days of inspiring keynotes, parallel technical sessions, poster presentations, field excursions and cultural evenings — all in the scenic Eastern Ghats of Odisha.
+            Five days of inspiring keynotes, parallel technical sessions, poster presentations, field excursions and cultural evenings — all in the scenic Eastern Ghats of Odisha.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: "14px", flexWrap: "wrap" }}>
             {[
-              { icon: "📅", label: "November 8 – 10, 2027" },
+              { icon: "📅", label: "November 8 – 12, 2027" },
               { icon: "📍", label: "Paralakhemundi, Odisha" },
               { icon: "🎤", label: "40+ Sessions" },
             ].map((chip, i) => (

@@ -710,7 +710,7 @@ export default function PageHeader() {
                 letterSpacing: "0.02em",
               }}
             >
-              Nov 8–10 · Odisha, India
+              Nov 8–12 · Odisha, India
             </div>
           </div>
         </Link>
