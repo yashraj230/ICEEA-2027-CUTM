@@ -155,7 +155,7 @@ function AboutConferencePage() {
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#fff", margin: "0 0 12px", position: "relative" }}>Ready to Participate?</h2>
           <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>Submit your abstract and be part of this landmark global conference.</p>
           <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: 12, position: "relative" }}>
-            <motion.a href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
+            <motion.a href="https://forms.gle/WZW2CrWhMZet1wep8" target="_blank" rel="noopener noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
               Register &amp; Submit Abstract
             </motion.a>
             <MotionLink to="/" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#e2e8f0", fontWeight: 600, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>← Back to Home</MotionLink>

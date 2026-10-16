@@ -133,9 +133,9 @@ function GuidelinesPage() {
             <div style={{ textAlign: "center" }}>
               <motion.a
                 whileTap={{ scale: 0.97 }}
-                href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform"
+                href="https://forms.gle/WZW2CrWhMZet1wep8"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 style={{
                   display: "inline-block",
                   background: "#166534",

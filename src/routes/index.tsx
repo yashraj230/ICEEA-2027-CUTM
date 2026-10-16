@@ -162,20 +162,25 @@ function Hero() {
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <motion.a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform"
+            href="https://forms.gle/WZW2CrWhMZet1wep8"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             whileTap={{ scale: 0.97 }}
-            className="rounded-full bg-gradient-to-r from-emerald-600 to-lime-600 px-7 py-3.5 font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 shimmer-btn"
+            className="rounded-full bg-gradient-to-r from-emerald-600 to-lime-600 px-7 py-3.5 font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/40 shimmer-btn cursor-pointer"
           >
             Register &amp; Submit Abstract
           </motion.a>
           <motion.a
-            href="https://forms.gle/WZW2CrWhMZet1wep8"
-            target="_blank"
-            rel="noreferrer"
+            href="#registration-fee"
             whileTap={{ scale: 0.97 }}
-            className="rounded-full bg-white px-7 py-3.5 font-bold text-slate-900 shadow-md transition-all duration-300 hover:scale-105 hover:bg-slate-100"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("registration-fee");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="rounded-full bg-white px-7 py-3.5 font-bold text-slate-900 shadow-md transition-all duration-300 hover:scale-105 hover:bg-slate-100 cursor-pointer"
           >
             Registration Fee
           </motion.a>
@@ -872,7 +877,7 @@ function Fees() {
           </div>
         </div>
 
-        <div data-reveal="fade-up">
+        <div id="registration-fee" data-reveal="fade-up" className="scroll-mt-24">
           <h2 className="text-center text-3xl font-bold text-emerald-900">
             💳 Registration / Participation Fee
           </h2>

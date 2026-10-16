@@ -31,7 +31,7 @@ const nav: NavItem[] = [
     children: [
       [
         "Submit Abstract",
-        "https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform",
+        "https://forms.gle/WZW2CrWhMZet1wep8",
       ],
       ["Submission Guidelines", "/submissions/guidelines"],
       ["Important Dates", "/important-dates"],
@@ -811,7 +811,7 @@ export default function PageHeader() {
             }}
           >
             <NavLink
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform"
+              href="https://forms.gle/WZW2CrWhMZet1wep8"
               onClick={closeMobile}
               style={{
                 display: "block",
