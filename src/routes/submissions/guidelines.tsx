@@ -7,8 +7,8 @@ import Footer from "../../components/Footer";
 export const Route = createFileRoute("/submissions/guidelines")({
   head: () => ({
     meta: [
-      { title: "Submission Guidelines | ICEEA - ICETS 2027" },
-      { name: "description", content: "Submission guidelines, important dates, and publication opportunities for ICEEA-ICETS 2027." },
+      { title: "Submission Guidelines | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Submission guidelines, important dates, and publication opportunities for ICSEECA-ICETS 2027." },
     ],
   }),
   component: GuidelinesPage,
@@ -23,7 +23,7 @@ function GuidelinesPage() {
       <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{ padding: "40px 24px 20px", textAlign: "center" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
-            ICEEA-2027 &amp; ICETS-2027 — Submissions
+            ICSEECA-2027 &amp; ICETS-2027 — Submissions
           </h1>
           <p style={{ fontSize: "clamp(1.1rem, 2vw, 1.3rem)", fontWeight: 600, color: "#475569", margin: "0 0 8px" }}>
             International Conference on Earth &amp; Environment / International Congress on Environmental &amp; Territorial Studies
@@ -158,11 +158,11 @@ function GuidelinesPage() {
 
           {/* About & Checklist Splits */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
-            {/* About ICEEA */}
+            {/* About ICSEECA */}
             <div style={{ background: "#fff", borderRadius: "20px", border: "1px solid #e2e8f0", padding: "28px", boxShadow: "0 4px 15px rgba(0,0,0,0.01)" }}>
-              <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1e293b", margin: "0 0 12px" }}>About ICEEA-2027</h4>
+              <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1e293b", margin: "0 0 12px" }}>About ICSEECA-2027</h4>
               <p style={{ fontSize: "0.85rem", color: "#475569", lineHeight: 1.6, marginBottom: "12px", textAlign: "justify" }}>
-                ICEEA-2027 aims to bring together researchers, academicians, environmentalists, policymakers and industry leaders to address complex Earth and environmental challenges arising during the Anthropocene epoch. It emphasises interdisciplinary dialogue on climate change, sustainability, natural resources, geosciences, environmental degradation, and advanced technological solutions.
+                ICSEECA-2027 aims to bring together researchers, academicians, environmentalists, policymakers and industry leaders to address complex Earth and environmental challenges arising during the Anthropocene epoch. It emphasises interdisciplinary dialogue on climate change, sustainability, natural resources, geosciences, environmental degradation, and advanced technological solutions.
               </p>
               <h5 style={{ fontSize: "0.9rem", fontWeight: 700, color: "#1e293b", margin: "0 0 6px" }}>Conference Goals</h5>
               <ul style={{ paddingLeft: "15px", margin: 0, fontSize: "0.8rem", color: "#475569", lineHeight: 1.6 }}>

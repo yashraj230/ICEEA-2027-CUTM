@@ -7,8 +7,8 @@ import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../
 export const Route = createFileRoute("/about-ipn")({
   head: () => ({
     meta: [
-      { title: "About IPN Mexico | ICEEA - ICETS 2027" },
-      { name: "description", content: "Learn about the National Polytechnic Institute of Mexico (IPN) and CIIEMAD — the international co-organiser of ICEEA-ICETS 2027." },
+      { title: "About IPN Mexico | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Learn about the National Polytechnic Institute of Mexico (IPN) and CIIEMAD — the international co-organiser of ICSEECA-ICETS 2027." },
     ],
   }),
   component: AboutIPNPage,
@@ -54,7 +54,7 @@ function AboutIPNPage() {
             {" "}(IPN)
           </h1>
           <p style={{ marginTop: 18, color: "#94a3b8", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            México's leading public technological higher education institution — co-organising ICEEA-ICETS 2027 through its Centre for Interdisciplinary Studies on Environment and Development (CIIEMAD).
+            México's leading public technological higher education institution — co-organising ICSEECA-ICETS 2027 through its Centre for Interdisciplinary Studies on Environment and Development (CIIEMAD).
           </p>
           <motion.a href="https://www.ipn.mx/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }}
             style={{ display: "inline-block", marginTop: 24, background: "linear-gradient(135deg,#ef4444,#b91c1c)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "12px 28px", borderRadius: 9999, textDecoration: "none" }}>
@@ -104,7 +104,7 @@ function AboutIPNPage() {
               The <strong style={{ color: "#0f172a" }}>Centre for Interdisciplinary Studies on Environment and Development (CIIEMAD)</strong> is IPN's premier research unit dedicated to understanding and addressing environmental and territorial challenges through an integrated, interdisciplinary approach.
             </p>
             <p style={{ color: "#475569", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
-              CIIEMAD has been the driving force behind the ICETS congress across 18 editions, establishing lasting scientific partnerships with institutions across India, Europe, and the Americas. For ICEEA-ICETS 2027, CIIEMAD collaborates with CUTM's Department of Civil Engineering to co-host this landmark international event in Odisha, India.
+              CIIEMAD has been the driving force behind the ICETS congress across 18 editions, establishing lasting scientific partnerships with institutions across India, Europe, and the Americas. For ICSEECA-ICETS 2027, CIIEMAD collaborates with CUTM's Department of Civil Engineering to co-host this landmark international event in Odisha, India.
             </p>
           </div>
         </div>
@@ -112,7 +112,7 @@ function AboutIPNPage() {
         {/* Pillars */}
         <div style={{ marginTop: 64 }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0f172a", margin: "0 0 10px" }}>IPN's Contribution to ICEEA-ICETS</h2>
+            <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0f172a", margin: "0 0 10px" }}>IPN's Contribution to ICSEECA-ICETS</h2>
             <p style={{ color: "#64748b", fontSize: "1rem", margin: 0 }}>Decades of environmental research and international collaboration</p>
           </div>
           <motion.div variants={staggerParent} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
@@ -141,7 +141,7 @@ function AboutIPNPage() {
             <div style={{ fontSize: "2.5rem", marginBottom: 10 }}>🇮🇳</div>
             <div style={{ fontWeight: 800, fontSize: "1.2rem", marginBottom: 6 }}>CUTM India</div>
             <div style={{ color: "#6ee7b7", fontSize: "0.85rem" }}>Paralakhemundi, Odisha</div>
-            <div style={{ marginTop: 12, color: "#94a3b8", fontSize: "0.85rem" }}>Host of ICEEA-ICETS 2027</div>
+            <div style={{ marginTop: 12, color: "#94a3b8", fontSize: "0.85rem" }}>Host of ICSEECA-ICETS 2027</div>
           </div>
         </div>
 
@@ -149,7 +149,7 @@ function AboutIPNPage() {
         <div style={{ marginTop: 72, background: "linear-gradient(135deg,#7f1d1d,#0f172a)", borderRadius: 24, padding: "48px 36px", textAlign: "center", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", top: -40, right: -40, width: 200, height: 200, borderRadius: "50%", background: "rgba(239,68,68,.08)", pointerEvents: "none" }} />
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#fff", margin: "0 0 12px", position: "relative" }}>Explore the International Partnership</h2>
-          <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>ICEEA-ICETS 2027 — where Mexico and India unite for global environmental science.</p>
+          <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>ICSEECA-ICETS 2027 — where Mexico and India unite for global environmental science.</p>
           <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: 12, position: "relative" }}>
             <motion.a href="https://www.ipn.mx/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg,#ef4444,#b91c1c)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
               Visit IPN Website

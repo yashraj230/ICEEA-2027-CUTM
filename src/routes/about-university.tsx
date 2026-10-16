@@ -7,8 +7,8 @@ import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../
 export const Route = createFileRoute("/about-university")({
   head: () => ({
     meta: [
-      { title: "About University | ICEEA - ICETS 2027" },
-      { name: "description", content: "Learn about Centurion University of Technology and Management (CUTM), the host institution of ICEEA-ICETS 2027 at Paralakhemundi, Odisha, India." },
+      { title: "About University | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Learn about Centurion University of Technology and Management (CUTM), the host institution of ICSEECA-ICETS 2027 at Paralakhemundi, Odisha, India." },
     ],
   }),
   component: AboutUniversityPage,
@@ -30,7 +30,7 @@ function AboutUniversityPage() {
     { icon: "🏆", title: "NAAC Accredited", desc: "Centurion University holds NAAC accreditation, reflecting its commitment to academic quality and continuous improvement." },
     { icon: "🔬", title: "Research & Innovation", desc: "Home to multiple research centres focusing on civil engineering, environmental science, agri-tech, and digital transformation." },
     { icon: "🌍", title: "International Collaborations", desc: "Active MoUs with leading universities across Mexico, USA, UK, Germany, and South East Asia for joint research and faculty exchange." },
-    { icon: "🌱", title: "Sustainability Focus", desc: "CUTM's green campus initiatives and environmental research programs align closely with the themes of ICEEA-ICETS 2027." },
+    { icon: "🌱", title: "Sustainability Focus", desc: "CUTM's green campus initiatives and environmental research programs align closely with the themes of ICSEECA-ICETS 2027." },
     { icon: "🤝", title: "Industry Connect", desc: "Strong industry-academia interface with 400+ corporate partners driving skill-based education and applied research." },
     { icon: "📚", title: "Comprehensive Education", desc: "Offering engineering, management, agriculture, law, health sciences, and liberal arts under one integrated ecosystem." },
   ];
@@ -59,7 +59,7 @@ function AboutUniversityPage() {
             <span style={{ color: "#f97316" }}>Technology &amp; Management</span>
           </h1>
           <p style={{ marginTop: 18, color: "#e2e8f0", fontSize: "1.05rem", lineHeight: 1.75, textShadow: "0 1px 5px rgba(0,0,0,0.5)" }}>
-            A premier institution at Paralakhemundi, Odisha, dedicated to excellence in engineering, technology, management, and research — proudly hosting ICEEA-ICETS 2027.
+            A premier institution at Paralakhemundi, Odisha, dedicated to excellence in engineering, technology, management, and research — proudly hosting ICSEECA-ICETS 2027.
           </p>
           <motion.a href="https://www.cutm.ac.in/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }}
             style={{ display: "inline-block", marginTop: 24, background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "12px 28px", borderRadius: 9999, textDecoration: "none", boxShadow: "0 4px 14px rgba(16,185,129,0.4)" }}>
@@ -97,7 +97,7 @@ function AboutUniversityPage() {
                 Located at <strong style={{ color: "#0f172a" }}>Paralakhemundi, Odisha</strong>, CUTM emphasizes interdisciplinary education and actively collaborates with national and international partners to enhance learning outcomes and foster innovation in civil engineering, environmental studies, and allied disciplines.
               </p>
               <p style={{ color: "#475569", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
-                CUTM's <strong style={{ color: "#0f172a" }}>Department of Civil Engineering</strong>, School of Engineering and Technology, is the organizing department for ICEEA-ICETS 2027, reflecting the university's commitment to environmental research and global knowledge exchange.
+                CUTM's <strong style={{ color: "#0f172a" }}>Department of Civil Engineering</strong>, School of Engineering and Technology, is the organizing department for ICSEECA-ICETS 2027, reflecting the university's commitment to environmental research and global knowledge exchange.
               </p>
             </div>
             <div style={{ flex: "0 0 260px", background: "linear-gradient(145deg, #ecfdf5, #f0fdf4)", borderRadius: 20, padding: "16px", border: "1px solid rgba(52,211,153,0.3)", display: "flex", flexDirection: "column" as const, alignItems: "center", textAlign: "center" as const, boxShadow: "0 10px 25px rgba(16,185,129,0.08)" }}>
@@ -176,7 +176,7 @@ function AboutUniversityPage() {
         <div style={{ marginTop: 72, background: "linear-gradient(135deg,#064e3b,#0f172a)", borderRadius: 24, padding: "48px 36px", textAlign: "center", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", top: -40, right: -40, width: 200, height: 200, borderRadius: "50%", background: "rgba(52,211,153,.08)", pointerEvents: "none" }} />
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: "#fff", margin: "0 0 12px", position: "relative" }}>Join Us at CUTM</h2>
-          <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>Be part of ICEEA-ICETS 2027 at one of India's premier technical universities.</p>
+          <p style={{ color: "#94a3b8", fontSize: "1rem", margin: "0 0 28px", position: "relative" }}>Be part of ICSEECA-ICETS 2027 at one of India's premier technical universities.</p>
           <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: 12, position: "relative" }}>
             <motion.a href="https://www.cutm.ac.in/" target="_blank" rel="noreferrer" whileTap={{ scale: 0.97 }} style={{ display: "inline-block", background: "linear-gradient(135deg,#10b981,#059669)", color: "#fff", fontWeight: 700, fontSize: 14, padding: "13px 28px", borderRadius: 9999, textDecoration: "none" }}>
               Visit CUTM Website

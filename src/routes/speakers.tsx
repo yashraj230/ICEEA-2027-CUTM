@@ -8,8 +8,8 @@ import { fadeUp, springItem, staggerParent, viewportOnce } from "../lib/motion";
 export const Route = createFileRoute("/speakers")({
   head: () => ({
     meta: [
-      { title: "Speakers | ICEEA - ICETS 2027" },
-      { name: "description", content: "Speakers at ICEEA-ICETS 2027 — keynote, international, and Indian speakers" },
+      { title: "Speakers | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Speakers at ICSEECA-ICETS 2027 — keynote, international, and Indian speakers" },
     ],
   }),
   component: SpeakersPage,
@@ -98,7 +98,7 @@ function SpeakersPage() {
       >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
-            Speakers - ICEEA-ICETS 2027
+            Speakers - ICSEECA-ICETS 2027
           </h1>
           <p style={{ fontSize: "clamp(1.1rem, 2vw, 1.3rem)", fontWeight: 600, color: "#475569", margin: "0 0 8px" }}>
             Distinguished experts from around the world

@@ -7,8 +7,8 @@ import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ICEEA - ICETS 2027 | Centurion University" },
-      { name: "description", content: "International Conference on Earth and Environment in the Anthropocene - About ICEEA-ICETS 2027 at Centurion University" },
+      { title: "About ICSEECA - ICETS 2027 | Centurion University" },
+      { name: "description", content: "International Conference on Earth and Environment in the Anthropocene - About ICSEECA-ICETS 2027 at Centurion University" },
     ],
   }),
   component: AboutPage,
@@ -377,7 +377,7 @@ function AboutPage() {
                 Conference Vision
               </h2>
               <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#475569", textAlign: "justify", margin: 0 }}>
-                The conference program will feature keynote lectures by eminent scientists and presentations of peer-reviewed original research from participants worldwide. ICEEA-2027 aspires to become a landmark forum for shaping future directions in environmental resilience and sustainable development.
+                The conference program will feature keynote lectures by eminent scientists and presentations of peer-reviewed original research from participants worldwide. ICSEECA-2027 aspires to become a landmark forum for shaping future directions in environmental resilience and sustainable development.
               </p>
             </div>
 
@@ -405,7 +405,7 @@ function AboutPage() {
                 </p>
                 <div style={{ display: "inline-block", background: "linear-gradient(135deg, #700151, #764ba2)", padding: "2px", borderRadius: "8px" }}>
                   <div style={{ background: "#fff", borderRadius: "6px", padding: "4px 24px" }}>
-                    <span style={{ color: "#0d8a57", fontWeight: 700, fontSize: "0.95rem" }}>ICEEA - ICETS - 2027</span>
+                    <span style={{ color: "#0d8a57", fontWeight: 700, fontSize: "0.95rem" }}>ICSEECA - ICETS - 2027</span>
                   </div>
                 </div>
               </div>

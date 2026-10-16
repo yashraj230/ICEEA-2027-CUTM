@@ -7,8 +7,8 @@ import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../
 export const Route = createFileRoute("/about-conference")({
   head: () => ({
     meta: [
-      { title: "About Conference | ICEEA - ICETS 2027" },
-      { name: "description", content: "Learn about ICEEA-2027 and the 19th International Congress on Environmental & Territorial Studies (ICETS-2027)." },
+      { title: "About Conference | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Learn about ICSEECA-2027 and the 19th International Congress on Environmental & Territorial Studies (ICETS-2027)." },
     ],
   }),
   component: AboutConferencePage,
@@ -127,7 +127,7 @@ function AboutConferencePage() {
           </div>
           <div style={{ background: "linear-gradient(135deg,#ecfdf5,#d1fae5)", borderRadius: 20, padding: 36, border: "1px solid #a7f3d0" }}>
             <p style={{ color: "#064e3b", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
-              The conference program will feature keynote lectures by eminent scientists and presentations of peer-reviewed original research from participants worldwide. <strong>ICEEA-2027</strong> aspires to become a landmark forum for shaping future directions in environmental resilience and sustainable development, bringing together the world's leading researchers, faculty, students, and industry professionals to disseminate, debate, and catalyze innovative solutions for the most pressing challenges in Earth and Environmental Sciences.
+              The conference program will feature keynote lectures by eminent scientists and presentations of peer-reviewed original research from participants worldwide. <strong>ICSEECA-2027</strong> aspires to become a landmark forum for shaping future directions in environmental resilience and sustainable development, bringing together the world's leading researchers, faculty, students, and industry professionals to disseminate, debate, and catalyze innovative solutions for the most pressing challenges in Earth and Environmental Sciences.
             </p>
           </div>
         </div>

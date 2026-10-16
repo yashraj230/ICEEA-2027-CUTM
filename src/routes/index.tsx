@@ -353,7 +353,7 @@ function ImportantDates() {
             }}>Dates</span>
           </h2>
           <p style={{ color: "#475569", marginTop: "12px", fontSize: "1rem" }}>
-            Mark your calendar — key milestones for ICEEA-ICETS 2027
+            Mark your calendar — key milestones for ICSEECA-ICETS 2027
           </p>
           <div style={{
             display: "flex", justifyContent: "center", marginTop: "16px",
@@ -506,7 +506,7 @@ function Announcements() {
             Announcements
           </h2>
           <p className="mt-2 text-emerald-200/70">
-            Key dates and updates for ICEEA-ICETS 2027
+            Key dates and updates for ICSEECA-ICETS 2027
           </p>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-emerald-400 to-lime-400" />
         </div>
@@ -730,7 +730,7 @@ function Themes() {
           Exploring Critical Challenges and Innovative Solutions for Our Planet's Future
         </p>
         <p data-reveal="fade-up" className="mt-1 text-center text-sm font-semibold text-emerald-700">
-          ICEEA - ICETS - 2027
+          ICSEECA - ICETS - 2027
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {themes.map((t, i) => {

@@ -7,7 +7,7 @@ import { fadeUp, MotionLink, viewportOnce } from "../lib/motion";
 export const Route = createFileRoute("/important-dates")({
   head: () => ({
     meta: [
-      { title: "Important Dates | ICEEA - ICETS 2027" },
+      { title: "Important Dates | ICSEECA - ICETS 2027" },
     ],
   }),
   component: ImportantDatesPage,

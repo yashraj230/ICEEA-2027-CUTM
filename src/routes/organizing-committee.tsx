@@ -8,8 +8,8 @@ import Footer from "../components/Footer";
 export const Route = createFileRoute("/organizing-committee")({
   head: () => ({
     meta: [
-      { title: "Organizing Committee | ICEEA - ICETS 2027" },
-      { name: "description", content: "Meet the organizing committee of ICEEA-ICETS 2027 — distinguished leaders and experts." },
+      { title: "Organizing Committee | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Meet the organizing committee of ICSEECA-ICETS 2027 — distinguished leaders and experts." },
     ],
   }),
   component: OrganizingCommitteePage,

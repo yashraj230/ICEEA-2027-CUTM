@@ -7,7 +7,7 @@ import { fadeUp, MotionLink, viewportOnce } from "../lib/motion";
 export const Route = createFileRoute("/registration")({
   head: () => ({
     meta: [
-      { title: "Registration | ICEEA - ICETS 2027" },
+      { title: "Registration | ICSEECA - ICETS 2027" },
     ],
   }),
   component: RegistrationPage,
@@ -20,12 +20,12 @@ function RegistrationPage() {
 
       <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce} style={{ padding: "80px 24px", textAlign: "center" }}>
         <div style={{ maxWidth: 600, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0d6efd", marginBottom: 16 }}>Registration for ICEEA-ICETS 2027</h2>
+          <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#0d6efd", marginBottom: 16 }}>Registration for ICSEECA-ICETS 2027</h2>
           <p style={{ fontSize: "0.95rem", color: "#6B7280", lineHeight: 1.7, marginBottom: 12 }}>
             The official registration portal is now available. Participants can access complete details including registration fees, paper submission guidelines, and conference schedules.
           </p>
           <p style={{ fontSize: "0.95rem", color: "#059669", fontWeight: 600, marginBottom: 24 }}>
-            Join ICEEA-ICETS 2027 and connect with leading researchers, academicians, and industry experts worldwide.
+            Join ICSEECA-ICETS 2027 and connect with leading researchers, academicians, and industry experts worldwide.
           </p>
           <p style={{ fontSize: "0.9rem", color: "#475569", marginBottom: 24 }}>
             Click below Button to Submit the Registration form & Fee Payment Details...

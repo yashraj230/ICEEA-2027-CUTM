@@ -118,7 +118,7 @@ function SchedulePage() {
             Conference <span style={{ background: "linear-gradient(90deg,#6ee7b7,#a7f3d0,#6ee7b7)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Schedule</span>
           </h1>
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "#d1fae5", fontWeight: 600, margin: "0 0 8px" }}>
-            ICEEA – ICETS 2027 · Centurion University of Technology and Management
+            ICSEECA – ICETS 2027 · Centurion University of Technology and Management
           </p>
           <p style={{ fontSize: "0.95rem", color: "#a7f3d0", margin: "0 auto 28px", maxWidth: 620, lineHeight: 1.7 }}>
             Three days of inspiring keynotes, parallel technical sessions, poster presentations, field excursions and cultural evenings — all in the scenic Eastern Ghats of Odisha.

@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 export const Route = createFileRoute("/field")({
   head: () => ({
     meta: [
-      { title: "Field Trip & Geological Sites | ICEEA - ICETS 2027" },
+      { title: "Field Trip & Geological Sites | ICSEECA - ICETS 2027" },
       { name: "description", content: "Educational geological field visit — Mahendragiri Hills and the Eastern Ghats near Centurion University, Paralakhemundi, Odisha." },
     ],
   }),
@@ -92,7 +92,7 @@ function FieldTripPage() {
             Field Trip &amp; <span style={{ background: "linear-gradient(90deg,#6ee7b7,#a7f3d0,#6ee7b7)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Geological Sites</span>
           </h1>
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "#d1fae5", fontWeight: 600, margin: "0 0 8px" }}>
-            Educational Geological Field Visit – ICEEA-ICETS 2027
+            Educational Geological Field Visit – ICSEECA-ICETS 2027
           </p>
           <p style={{ fontSize: "0.95rem", color: "#a7f3d0", margin: "0 0 20px" }}>
             11–12 November 2027 · Eastern Ghats, Paralakhemundi, Odisha

@@ -9,7 +9,7 @@ type NavItem =
 const nav: NavItem[] = [
   { label: "Home", href: "/" },
   {
-    label: "About ICEEA",
+    label: "About ICSEECA",
     children: [
       ["About Conference", "/about"],
       ["About University", "https://www.cutm.ac.in/"],
@@ -42,7 +42,7 @@ const nav: NavItem[] = [
     label: "Conference",
     children: [
       ["Conference Schedule", "/program/schedule"],
-      ["ICEEA-ICETS-2027 Themes", "/themes"],
+      ["ICSEECA-ICETS-2027 Themes", "/themes"],
       ["Field Trip", "/field"],
       ["Venue & Travel", "/venue-travel"],
       ["Tour Information", "/tour"],
@@ -690,7 +690,7 @@ export default function PageHeader() {
                 textTransform: "uppercase",
               }}
             >
-              ICEEA · ICETS
+              ICSEECA · ICETS
             </div>
             <div
               style={{

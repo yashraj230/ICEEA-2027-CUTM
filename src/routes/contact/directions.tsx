@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 export const Route = createFileRoute("/contact/directions")({
   head: () => ({
     meta: [
-      { title: "Directions & Map | ICEEA - ICETS 2027" },
+      { title: "Directions & Map | ICSEECA - ICETS 2027" },
     ],
   }),
   component: DirectionsPage,
@@ -92,7 +92,7 @@ function DirectionsPage() {
         <div style={{ position: "absolute", top: -80, right: -80, width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle,rgba(52,211,153,0.12),transparent 70%)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", bottom: -60, left: -60, width: 250, height: 250, borderRadius: "50%", background: "radial-gradient(circle,rgba(52,211,153,0.08),transparent 70%)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 700, margin: "0 auto" }}>
-          <span style={{ display: "inline-block", background: "rgba(52,211,153,0.15)", border: "1px solid rgba(52,211,153,0.3)", color: "#6ee7b7", fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "6px 18px", borderRadius: 9999, marginBottom: 20 }}>ICEEA · ICETS 2027</span>
+          <span style={{ display: "inline-block", background: "rgba(52,211,153,0.15)", border: "1px solid rgba(52,211,153,0.3)", color: "#6ee7b7", fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", padding: "6px 18px", borderRadius: 9999, marginBottom: 20 }}>ICSEECA · ICETS 2027</span>
           <h1 style={{ fontSize: "clamp(2rem,5vw,3rem)", fontWeight: 800, color: "#fff", lineHeight: 1.15, margin: "0 0 12px" }}>
             Directions &{" "}
             <span style={{ background: "linear-gradient(90deg,#34d399,#a3e635)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Map</span>

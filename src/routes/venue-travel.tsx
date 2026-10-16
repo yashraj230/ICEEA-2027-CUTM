@@ -8,11 +8,11 @@ import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../
 export const Route = createFileRoute("/venue-travel")({
   head: () => ({
     meta: [
-      { title: "Venue & Travel | ICEEA - ICETS 2027" },
+      { title: "Venue & Travel | ICSEECA - ICETS 2027" },
       {
         name: "description",
         content:
-          "Venue and travel information for ICEEA - ICETS 2027 at Centurion University of Technology and Management, Paralakhemundi Campus, Gajapati, Odisha, India.",
+          "Venue and travel information for ICSEECA - ICETS 2027 at Centurion University of Technology and Management, Paralakhemundi Campus, Gajapati, Odisha, India.",
       },
     ],
   }),
@@ -80,7 +80,7 @@ const accommodations = [
     description:
       "On-campus accommodation may be available for eligible participants subject to university availability and prior confirmation.",
     buttonLabel: "Enquire",
-    href: "mailto:iceea@cutm.ac.in?subject=Accommodation%20Enquiry%20-%20University%20Hostel%20(ICEEA%20-%20ICETS%202027)",
+    href: "mailto:iceea@cutm.ac.in?subject=Accommodation%20Enquiry%20-%20University%20Hostel%20(ICSEECA%20-%20ICETS%202027)",
   },
   {
     icon: "🏨",
@@ -463,7 +463,7 @@ function VenueTravelPage() {
               marginBottom: 20,
             }}
           >
-            ICEEA · ICETS 2027
+            ICSEECA · ICETS 2027
           </motion.span>
           <motion.h1
             variants={fadeUp}
@@ -608,7 +608,7 @@ function VenueTravelPage() {
                   margin: "0 0 20px",
                 }}
               >
-                The ICEEA–ICETS 2027 conference will be hosted at the Auditorium of Centurion
+                The ICSEECA–ICETS 2027 conference will be hosted at the Auditorium of Centurion
                 University of Technology and Management, Paralakhemundi Campus. Located in the
                 scenic Gajapati district of Odisha, the campus provides a peaceful academic
                 environment surrounded by the natural landscape of the Eastern Ghats.
@@ -1102,7 +1102,7 @@ function VenueTravelPage() {
             align="center"
             eyebrow="Plan Ahead"
             title="Travel Information"
-            subtitle="Helpful guidance for planning your visit to ICEEA – ICETS 2027."
+            subtitle="Helpful guidance for planning your visit to ICSEECA – ICETS 2027."
           />
           <motion.div
             variants={fadeUp}

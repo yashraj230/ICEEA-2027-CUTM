@@ -62,7 +62,7 @@ export default function Footer() {
                 letterSpacing: "-0.01em",
               }}
             >
-              ICEEA - ICETS 2027
+              ICSEECA - ICETS 2027
             </div>
             <p
               style={{
@@ -150,7 +150,7 @@ export default function Footer() {
         }}
       >
         <p style={{ margin: 0, fontSize: "12px", color: "#64748b" }}>
-          © 2027 ICEEA – ICETS. All rights reserved.
+          © 2027 ICSEECA – ICETS. All rights reserved.
         </p>
         <p style={{ margin: "8px 0 0", fontSize: "12px", color: "#64748b" }}>
           Designed and developed by{" "}

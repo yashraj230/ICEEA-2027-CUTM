@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 export const Route = createFileRoute("/themes")({
   head: () => ({
     meta: [
-      { title: "Conference Themes | ICEEA - ICETS 2027" },
+      { title: "Conference Themes | ICSEECA - ICETS 2027" },
     ],
   }),
   component: ThemesPage,
@@ -129,7 +129,7 @@ function ThemesPage() {
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <div style={{ display: "inline-block", background: "linear-gradient(135deg, #960039, #b40072)", padding: "2px", borderRadius: 8 }}>
               <div style={{ background: "#fff", borderRadius: 6, padding: "4px 24px" }}>
-                <h4 style={{ color: "#059669", fontWeight: 700, margin: 0 }}>ICEEA - ICETS - 2027</h4>
+                <h4 style={{ color: "#059669", fontWeight: 700, margin: 0 }}>ICSEECA - ICETS - 2027</h4>
               </div>
             </div>
           </div>

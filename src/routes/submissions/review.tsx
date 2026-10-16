@@ -7,8 +7,8 @@ import Footer from "../../components/Footer";
 export const Route = createFileRoute("/submissions/review")({
   head: () => ({
     meta: [
-      { title: "Review Process | ICEEA - ICETS 2027" },
-      { name: "description", content: "Learn about the peer review process, timeline, review stages, and abstract guidelines for ICEEA-ICETS 2027." },
+      { title: "Review Process | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Learn about the peer review process, timeline, review stages, and abstract guidelines for ICSEECA-ICETS 2027." },
     ],
   }),
   component: ReviewPage,
@@ -23,7 +23,7 @@ function ReviewPage() {
       <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{ padding: "40px 24px 20px", textAlign: "center" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
-            Review Process — ICEEA-2027
+            Review Process — ICSEECA-2027
           </h1>
           <p style={{ fontSize: "clamp(1.1rem, 2vw, 1.3rem)", fontWeight: 600, color: "#475569", margin: "0 0 8px" }}>
             Transparent, fair, and rigorous peer-review to ensure high scholarly quality.
@@ -44,7 +44,7 @@ function ReviewPage() {
                 Overview
               </h3>
               <p style={{ fontSize: "0.9rem", color: "#475569", lineHeight: 1.7, marginBottom: "24px" }}>
-                All full papers submitted to ICEEA/ICETS 2027 will be evaluated through a multi-stage peer-review system. The process is designed to be objective, constructive, and timely. Final publication decisions are based exclusively on reviewer recommendations.
+                All full papers submitted to ICSEECA/ICETS 2027 will be evaluated through a multi-stage peer-review system. The process is designed to be objective, constructive, and timely. Final publication decisions are based exclusively on reviewer recommendations.
               </p>
 
               <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1e293b", marginBottom: "16px" }}>Review Stages</h4>
@@ -192,7 +192,7 @@ function ReviewPage() {
               Abstract Submission Guidelines
             </h3>
             <p style={{ fontSize: "0.9rem", color: "#475569", lineHeight: 1.7, marginBottom: "20px" }}>
-              Follow the official ICEEA-2027 &amp; ICETS-2027 abstract structure for primary submission review:
+              Follow the official ICSEECA-2027 &amp; ICETS-2027 abstract structure for primary submission review:
             </p>
 
             <div style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "20px", marginBottom: "20px" }}>

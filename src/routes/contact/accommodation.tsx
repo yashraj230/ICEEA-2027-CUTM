@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 export const Route = createFileRoute("/contact/accommodation")({
   head: () => ({
     meta: [
-      { title: "Accommodation | ICEEA - ICETS 2027" },
+      { title: "Accommodation | ICSEECA - ICETS 2027" },
     ],
   }),
   component: AccommodationPage,

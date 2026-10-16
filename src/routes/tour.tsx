@@ -8,11 +8,11 @@ import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../
 export const Route = createFileRoute("/tour")({
   head: () => ({
     meta: [
-      { title: "Discover Odisha | ICEEA - ICETS 2027" },
+      { title: "Discover Odisha | ICSEECA - ICETS 2027" },
       {
         name: "description",
         content:
-          "Discover Odisha — explore the culture, nature and heritage of Odisha around Paralakhemundi for delegates of ICEEA - ICETS 2027 at Centurion University of Technology and Management.",
+          "Discover Odisha — explore the culture, nature and heritage of Odisha around Paralakhemundi for delegates of ICSEECA - ICETS 2027 at Centurion University of Technology and Management.",
       },
     ],
   }),
@@ -62,7 +62,7 @@ const destinations: Destination[] = [
     category: "Around Paralakhemundi",
     badge: "Conference Host City",
     description:
-      "Paralakhemundi is the cultural and administrative heart of Gajapati district and the host location of ICEEA–ICETS 2027. The town offers visitors an opportunity to experience the distinctive culture, landscapes and heritage of southern Odisha.",
+      "Paralakhemundi is the cultural and administrative heart of Gajapati district and the host location of ICSEECA–ICETS 2027. The town offers visitors an opportunity to experience the distinctive culture, landscapes and heritage of southern Odisha.",
     image: img("photo-1506318137071-a8e063b4bec0"),
     highlights: [
       "Local heritage",
@@ -158,7 +158,7 @@ const destinations: Destination[] = [
     ],
     nearby: ["puri", "konark", "gopalpur", "berhampur"],
     envNote:
-      "An ideal destination for delegates interested in wetlands, biodiversity and environmental conservation — particularly relevant to the ICEEA–ICETS Earth and environmental themes.",
+      "An ideal destination for delegates interested in wetlands, biodiversity and environmental conservation — particularly relevant to the ICSEECA–ICETS Earth and environmental themes.",
   },
   {
     id: "puri",
@@ -1234,7 +1234,7 @@ function TourPage() {
               marginBottom: 22,
             }}
           >
-            ICEEA–ICETS 2027 | Paralakhemundi, Odisha
+            ICSEECA–ICETS 2027 | Paralakhemundi, Odisha
           </motion.span>
           <motion.h1
             variants={fadeUp}
@@ -1275,7 +1275,7 @@ function TourPage() {
               textShadow: "0 2px 8px rgba(0,0,0,0.5)",
             }}
           >
-            Make the most of your visit to ICEEA–ICETS 2027 by exploring Odisha's remarkable
+            Make the most of your visit to ICSEECA–ICETS 2027 by exploring Odisha's remarkable
             temples, beaches, forests, wetlands, tribal heritage and scenic Eastern Ghats.
           </motion.p>
         </motion.div>
@@ -1327,7 +1327,7 @@ function TourPage() {
                 display: "inline-block",
               }}
             />
-            ICEEA–ICETS 2027 · Paralakhemundi
+            ICSEECA–ICETS 2027 · Paralakhemundi
           </span>
           <h2
             style={{
@@ -1358,7 +1358,7 @@ function TourPage() {
               color: "#475569",
             }}
           >
-            Welcome, ICEEA–ICETS 2027 delegates. Discover the rich cultural heritage, natural
+            Welcome, ICSEECA–ICETS 2027 delegates. Discover the rich cultural heritage, natural
             landscapes, beaches, temples, wildlife and Eastern Ghats surrounding Paralakhemundi and
             Odisha.
           </p>
@@ -1479,7 +1479,7 @@ function TourPage() {
             align="center"
             eyebrow="Beyond the Conference"
             title="Make the Most of Your Conference Visit"
-            subtitle="Your journey to ICEEA–ICETS 2027 can be more than a conference experience. Take time to discover Odisha's natural beauty, cultural heritage, historic architecture and diverse ecosystems."
+            subtitle="Your journey to ICSEECA–ICETS 2027 can be more than a conference experience. Take time to discover Odisha's natural beauty, cultural heritage, historic architecture and diverse ecosystems."
           />
           <motion.div
             variants={staggerParent}
@@ -1768,7 +1768,7 @@ function TourPage() {
             }}
           >
             Welcome to Odisha.{" "}
-            <span style={{ color: "#6ee7b7" }}>See you at ICEEA–ICETS 2027.</span>
+            <span style={{ color: "#6ee7b7" }}>See you at ICSEECA–ICETS 2027.</span>
           </h3>
           <p
             style={{

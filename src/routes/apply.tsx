@@ -7,7 +7,7 @@ import { fadeUp, MotionLink, viewportOnce } from "../lib/motion";
 export const Route = createFileRoute("/apply")({
   head: () => ({
     meta: [
-      { title: "How to Apply | ICEEA - ICETS 2027" },
+      { title: "How to Apply | ICSEECA - ICETS 2027" },
     ],
   }),
   component: ApplyPage,
