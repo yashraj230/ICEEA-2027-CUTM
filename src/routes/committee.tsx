@@ -4,6 +4,7 @@ import { useState } from "react";
 import { fadeUp, MotionLink, springItem, staggerParent, viewportOnce } from "../lib/motion";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
+import { getInitials } from "../lib/utils";
 
 export const Route = createFileRoute("/committee")({
   head: () => ({
@@ -226,12 +227,7 @@ function SectionTitle({ title }: { title: string }) {
 
 function ProfileImage({ src, name, size = 150 }: { src?: string; name: string; size?: number }) {
   const [error, setError] = useState(false);
-  const initials = name
-    .split(" ")
-    .filter((s) => s[0]?.match(/[A-Z]/))
-    .map((n) => n[0])
-    .slice(0, 2)
-    .join("");
+  const initials = getInitials(name);
 
   if (error || !src) {
     return (

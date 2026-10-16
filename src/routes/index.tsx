@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import { RevealSection } from "../lib/motion";
+import { getInitials } from "../lib/utils";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -972,7 +973,7 @@ function Conveners() {
           {conveners.map((c, i) => (
             <div key={c.name} data-reveal="fade-up" className={`rounded-xl bg-white p-6 shadow-md border card-hover stagger-${Math.min(i + 1, 8)}`}>
               <div className="mx-auto grid h-24 w-24 place-items-center rounded-full bg-emerald-100 text-3xl font-bold text-emerald-900">
-                {c.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                {getInitials(c.name)}
               </div>
               <h3 className="mt-4 text-center font-bold text-emerald-900">{c.name}</h3>
               <p className="mt-1 text-center text-sm font-semibold text-slate-600">{c.role}</p>
@@ -1290,7 +1291,7 @@ function Committee() {
                 {sec.members.map((m, i) => (
                   <div key={m.name} data-reveal="fade-up" className={`rounded-xl bg-white p-5 shadow-sm border card-hover stagger-${Math.min(i + 1, 8)}`}>
                     <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-emerald-100 font-bold text-emerald-900">
-                      {m.name.split(" ").filter((s) => s[0] && s[0].match(/[A-Z]/)).map((n) => n[0]).slice(0, 2).join("")}
+                      {getInitials(m.name)}
                     </div>
                     <h4 className="mt-3 text-center font-bold text-emerald-900">{m.name}</h4>
                     <p className="mt-1 text-center text-sm text-slate-700">{m.role}</p>
