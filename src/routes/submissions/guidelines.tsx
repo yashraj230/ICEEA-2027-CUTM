@@ -51,42 +51,42 @@ function GuidelinesPage() {
                 <span style={{ fontSize: "1.5rem" }}>📅</span>
                 <div>
                   <p style={{ margin: "0 0 4px", fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>Abstract submission starts</p>
-                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>01 June 2027</p>
+                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>01 April 2027</p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: "12px" }}>
                 <span style={{ fontSize: "1.5rem" }}>📅</span>
                 <div>
                   <p style={{ margin: "0 0 4px", fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>Last date for submission of abstract</p>
-                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>30 August 2027</p>
+                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>30 June 2027</p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: "12px" }}>
                 <span style={{ fontSize: "1.5rem" }}>📅</span>
                 <div>
                   <p style={{ margin: "0 0 4px", fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>Acceptance notification</p>
-                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>Within 15 days of abstract review</p>
+                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>15 August 2027</p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: "12px" }}>
                 <span style={{ fontSize: "1.5rem" }}>📅</span>
                 <div>
                   <p style={{ margin: "0 0 4px", fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>Last date of full paper submission</p>
-                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>30 September 2027</p>
+                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>30 August 2027</p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: "12px" }}>
                 <span style={{ fontSize: "1.5rem" }}>📅</span>
                 <div>
-                  <p style={{ margin: "0 0 4px", fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>Last date of registration</p>
-                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>30 September 2027</p>
+                  <p style={{ margin: "0 0 4px", fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>Last date of registration (Along with payment)</p>
+                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>7 October 2027</p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: "12px" }}>
                 <span style={{ fontSize: "1.5rem" }}>📅</span>
                 <div>
                   <p style={{ margin: "0 0 4px", fontSize: "0.8rem", color: "#64748b", fontWeight: 600 }}>Conference dates</p>
-                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>8 – 10 November 2027</p>
+                  <p style={{ margin: 0, fontSize: "0.95rem", fontWeight: 750, color: "#1e293b" }}>8 – 12 November 2027</p>
                 </div>
               </div>
             </div>

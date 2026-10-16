@@ -95,7 +95,7 @@ function FieldTripPage() {
             Educational Geological Field Visit – ICEEA-ICETS 2027
           </p>
           <p style={{ fontSize: "0.95rem", color: "#a7f3d0", margin: "0 0 20px" }}>
-            10th November 2027 · Eastern Ghats, Paralakhemundi, Odisha
+            11–12 November 2027 · Eastern Ghats, Paralakhemundi, Odisha
           </p>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "#ecfdf5", fontSize: "0.85rem", fontWeight: 600, padding: "10px 18px", borderRadius: 9999 }}>
             <span>📍</span> Centurion University of Technology and Management
@@ -143,15 +143,15 @@ function FieldTripPage() {
 
           {/* Registration fee */}
           <div data-reveal="fade-up" className="stagger-2" style={{ background: "#fff", borderRadius: 18, border: "1px solid #e2e8f0", boxShadow: "0 6px 20px rgba(0,0,0,0.05)", padding: "28px", marginBottom: 36, textAlign: "center" }}>
-            <h3 style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0f172a", margin: "0 0 18px" }}>Registration Fee</h3>
+            <h3 style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0f172a", margin: "0 0 18px" }}>Field Trip Registration Fee (11–12 November 2027)</h3>
             <div style={{ display: "flex", justifyContent: "center", gap: "18px", flexWrap: "wrap" }}>
               <div className="card-hover" style={{ background: "linear-gradient(135deg, #f0fdf4, #d1fae5)", border: "1px solid #a7f3d0", borderRadius: 14, padding: "22px 30px", minWidth: 230 }}>
                 <h5 style={{ fontWeight: 700, color: "#047857", margin: "0 0 8px", fontSize: "0.95rem" }}>Indian Participants</h5>
-                <p style={{ fontWeight: 800, fontSize: "1.3rem", color: "#065f46", margin: 0 }}>₹ 1500 /-</p>
+                <p style={{ fontWeight: 800, fontSize: "1.3rem", color: "#065f46", margin: 0 }}>INR ₹3000/-</p>
               </div>
               <div className="card-hover" style={{ background: "linear-gradient(135deg, #ecfdf5, #d1fae5)", border: "1px solid #a7f3d0", borderRadius: 14, padding: "22px 30px", minWidth: 230 }}>
                 <h5 style={{ fontWeight: 700, color: "#047857", margin: "0 0 8px", fontSize: "0.95rem" }}>International Participants</h5>
-                <p style={{ fontWeight: 800, fontSize: "1.3rem", color: "#065f46", margin: 0 }}>USD $35.00</p>
+                <p style={{ fontWeight: 800, fontSize: "1.3rem", color: "#065f46", margin: 0 }}>USD $ 50.00</p>
               </div>
             </div>
           </div>

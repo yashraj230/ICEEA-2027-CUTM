@@ -154,7 +154,7 @@ function AboutUniversityPage() {
               <div style={{ display: "flex", flexDirection: "column" as const, gap: 8 }}>
                 {[
                   ["📍", "Paralakhemundi, Odisha - India"],
-                  ["🗓️", "November 8–10, 2027"],
+                  ["🗓️", "November 8–12, 2027"],
                   ["🚌", "Field Trip: November 11–12, 2027"],
                 ].map(([ico, txt]) => (
                   <div key={txt} style={{ display: "flex", alignItems: "center", gap: 10 }}>

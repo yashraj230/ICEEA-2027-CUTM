@@ -31,30 +31,23 @@ function ImportantDatesPage() {
                 </tr>
               </thead>
               <tbody>
-                {(
-                  [
-                    ["Abstract submission starts", "01.01.2027"],
-                    ["Last date of Submission of Abstract", { orig: "30.06.2027", ext: "Extended Date 31.07.2027" }],
-                    ["Acceptance Notification Issued", "Within 7 days of Abstract Review"],
-                    ["Last date of Full paper submission", "15.08.2027"],
-                    ["Last Date of Registration", "31.07.2027"],
-                  ] as [string, string | { orig: string; ext: string }][]
-                ).map((row, i) => (
+                {[
+                  ["Abstract submission starts", "01.04.2027"],
+                  ["Last date of Submission of Abstract", "30.06.2027"],
+                  ["Acceptance Notification Issued", "15.08.2027"],
+                  ["Last date of Full paper submission", "30.08.2027"],
+                  ["Last Date of Registration (Along with payment)", "07.10.2027"],
+                ].map((row, i) => (
                   <tr key={i} style={{ borderBottom: "1px solid #e2e8f0" }}>
                     <td style={{ padding: "14px 24px", fontWeight: 600, color: "#1e293b", fontSize: "0.9rem" }}>{row[0]}</td>
                     <td style={{ padding: "14px 24px", textAlign: "right", fontWeight: 700, color: "#0f172a", fontSize: "0.9rem" }}>
-                      {typeof row[1] === "string" ? row[1] : (
-                        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
-                          <span style={{ color: "#94a3b8", textDecoration: "line-through", fontSize: "0.85rem" }}>{row[1].orig}</span>
-                          <span style={{ color: "#059669" }}>{row[1].ext}</span>
-                        </div>
-                      )}
+                      {row[1]}
                     </td>
                   </tr>
                 ))}
                 <tr style={{ background: "#d1fae5" }}>
                   <td style={{ padding: "14px 24px", fontWeight: 700, color: "#1e293b", fontSize: "0.9rem" }}>Conference dates</td>
-                  <td style={{ padding: "14px 24px", textAlign: "right", fontWeight: 700, color: "#047857", fontSize: "1.1rem" }}>8th – 10th November, 2027</td>
+                  <td style={{ padding: "14px 24px", textAlign: "right", fontWeight: 700, color: "#047857", fontSize: "1.1rem" }}>8th – 12th November, 2027</td>
                 </tr>
               </tbody>
             </table>
@@ -89,17 +82,18 @@ function ImportantDatesPage() {
               <thead>
                 <tr style={{ background: "#059669", color: "#fff" }}>
                   <th style={{ textAlign: "center", padding: "16px 24px", fontWeight: 700, fontSize: "0.9rem" }}>Category</th>
-                  <th style={{ textAlign: "center", padding: "16px 24px", fontWeight: 700, fontSize: "0.9rem" }}>Early Bird Registration Fee<br/>(30-06-2027)</th>
-                  <th style={{ textAlign: "center", padding: "16px 24px", fontWeight: 700, fontSize: "0.9rem" }}>Late Registration Fee after<br/>(31-07-2027)</th>
+                  <th style={{ textAlign: "center", padding: "16px 24px", fontWeight: 700, fontSize: "0.9rem" }}>Early Bird Registration Fee<br/>(31-08-2027)</th>
+                  <th style={{ textAlign: "center", padding: "16px 24px", fontWeight: 700, fontSize: "0.9rem" }}>Late Registration Fee after<br/>(30-09-2027)</th>
                 </tr>
-              </thead>              <tbody>
+              </thead>
+              <tbody>
                 {[
                   ["Foreign Delegates (Teachers, Researchers, Scientists, Professors)", "US$ 300.00", "US$ 350.00"],
                   ["Foreign Delegates (Students)", "US$ 100.00", "US$ 150.00"],
                   ["Accompanying Guest (International)", "US$ 100.00", "US$ 125.00"],
-                  ["Indian Delegates (Teachers, Researchers, Scientists, Professors)", "INR ₹3000.00", "INR ₹3500.00"],
-                  ["Research Scholars", "INR ₹1000.00", "INR ₹1500.00"],
-                  ["Indian Delegates (Students)", "INR ₹500.00", "INR ₹750.00"],
+                  ["Indian Delegates (Teachers, Researchers, Scientists, and Professors)", "INR ₹4000.00", "INR ₹4500.00"],
+                  ["Research Scholars", "INR ₹2000.00", "INR ₹2500.00"],
+                  ["Indian Delegates (Students)", "INR ₹1000.00", "INR ₹1500.00"],
                   ["Accompanying Guest (National)", "INR ₹1000.00", "INR ₹1500.00"],
                 ].map((row, i) => (
                   <tr key={i} style={{ borderBottom: "1px solid #e2e8f0", background: i % 2 === 0 ? "#fff" : "#f8fafc" }}>

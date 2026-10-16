@@ -139,10 +139,10 @@ function AboutPage() {
       >
         <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
           <h1 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "#115e3b", margin: "0 0 10px" }}>
-            ABOUT ICEEA - ICETS 2027
+            ABOUT ICSEECA - ICETS 2027
           </h1>
           <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.25rem)", fontWeight: 600, color: "#069865", margin: "0 0 25px" }}>
-            International Conference on Earth and Environment in the Anthropocene
+            International Conference on Sustainable Earth, Environment, and Climate Action
           </p>
 
           {/* Action Tabs / Buttons */}
@@ -217,7 +217,7 @@ function AboutPage() {
               border: "1px solid #e2e8f0",
             }}
           >
-            {/* About ICEEA - 2027 Section */}
+            {/* About ICSEECA - 2027 Section */}
             <div style={{ marginBottom: "35px" }}>
               <h2
                 style={{
@@ -229,10 +229,10 @@ function AboutPage() {
                   marginBottom: "16px",
                 }}
               >
-                About ICEEA - 2027
+                About ICSEECA - 2027
               </h2>
               <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#475569", textAlign: "justify", marginBottom: "16px" }}>
-                ICEEA-2027 aims to bring together researchers, academicians, environmentalists, policymakers, and industry leaders to address complex Earth and environmental challenges emerging during the Anthropocene epoch. The conference promotes interdisciplinary dialogue focusing on climate change, sustainability, natural resources, geosciences, environmental degradation, and advanced technological solutions.
+                ICSEECA -2027 aims to bring together researchers, academicians, environmentalists, policymakers, and industry leaders to address complex Earth and environmental challenges emerging during the Anthropocene epoch. The conference promotes interdisciplinary dialogue focusing on climate change, sustainability, natural resources, geosciences, environmental degradation, and advanced technological solutions.
               </p>
               <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#475569", textAlign: "justify", marginBottom: "16px" }}>
                 This international conference actively convenes the world's leading researchers, faculty, students, and industry professionals to disseminate, debate, and catalyze innovative solutions for the most pressing challenges in Earth and Environmental Sciences.
@@ -545,7 +545,7 @@ function AboutPage() {
                 Conference Dates
               </h3>
               <p style={{ fontSize: "1.4rem", fontWeight: 700, color: "#0f172a", margin: "0 0 6px" }}>
-                8ᵗʰ – 10ᵗʰ November, 2027
+                8ᵗʰ – 12ᵗʰ November 2027
               </p>
               <p style={{ fontSize: "0.95rem", color: "#334155", margin: 0, fontWeight: 550 }}>
                 Centurion University of Technology and Management, Paralakhemundi, Odisha, India

@@ -34,3 +34,8 @@ dist-ssr
 # Local workspace and tool folders
 .workspace/
 .lovable/
+
+# PDF reports and generation scripts
+*.pdf
+*pdf*.py
+audit_codebase.py

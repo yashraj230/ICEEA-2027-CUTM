@@ -9,17 +9,17 @@ import { RevealSection } from "../lib/motion";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ICEEA - ICETS 2027 | International Conference on Earth and Environment" },
+      { title: "ICSEECA - ICETS 2027 | International Conference on Sustainable Earth, Environment, and Climate Action" },
       {
         name: "description",
         content:
-          "International Conference on Earth and Environment in the Anthropocene (ICEEA - 2027) & 19th International Congress on Environmental & Territorial Studies (ICETS - 2027). November 8-10, 2027, Centurion University of Technology and Management, Paralakhemundi, Odisha - India.",
+          "International Conference on Sustainable Earth, Environment, and Climate Action (ICSEECA) & 19th International Congress on Environmental & Territorial Studies (ICETS - 2027). November 8-12, 2027, Centurion University of Technology and Management, Paralakhemundi, Odisha - India.",
       },
-      { property: "og:title", content: "ICEEA - ICETS 2027" },
+      { property: "og:title", content: "ICSEECA - ICETS 2027" },
       {
         property: "og:description",
         content:
-          "International Conference on Earth and Environment in the Anthropocene. Nov 8–10, 2027, Centurion University of Technology and Management, Paralakhemundi, Odisha - India.",
+          "International Conference on Sustainable Earth, Environment, and Climate Action. Nov 8–12, 2027, Centurion University of Technology and Management, Paralakhemundi, Odisha - India.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -67,11 +67,11 @@ function Hero() {
       ))}
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-20 text-center text-white">
-        <p className="text-2xl text-lime-300 font-semibold tracking-wide animate-fade-in-up">ICEEA - ICETS - 2027</p>
+        <p className="text-2xl text-lime-300 font-semibold tracking-wide animate-fade-in-up">ICSEECA - ICETS 2027</p>
         <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow animate-fade-in-up">
-          International Conference on Earth and Environment in the Anthropocene
+          International Conference on Sustainable Earth, Environment, and Climate Action
           <br />
-          (ICEEA - 2027)
+          (ICSEECA)
         </h1>
         <p className="mt-4 text-2xl animate-fade-in-up">&amp;</p>
         <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-bold drop-shadow animate-fade-in-up">
@@ -157,7 +157,7 @@ function Hero() {
         <p className="font-bold text-lg px-4">National Polytechnic Institute (IPN), Mexico City</p>
 
         <div className="mt-6 inline-block rounded-full bg-lime-300 px-8 py-3 text-emerald-950 font-bold text-lg shadow-md">
-          8<sup>th</sup> – 10<sup>th</sup> November 2027
+          8<sup>th</sup> – 12<sup>th</sup> November 2027
         </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -171,7 +171,7 @@ function Hero() {
             Register &amp; Submit Abstract
           </motion.a>
           <motion.a
-            href="https://forms.gle/8C49wv5vnYmVAwq5A"
+            href="https://forms.gle/WZW2CrWhMZet1wep8"
             target="_blank"
             rel="noreferrer"
             whileTap={{ scale: 0.97 }}
@@ -212,7 +212,7 @@ const dates = [
     icon: "🚀",
     label: "SUBMISSION OPEN",
     title: "Abstract Submission Starts",
-    date: "01 June 2027",
+    date: "01 April 2027",
     gradient: "from-emerald-500 to-green-600",
     bg: "from-emerald-50 to-green-50",
     border: "border-emerald-200",
@@ -223,7 +223,7 @@ const dates = [
     icon: "⏰",
     label: "DEADLINE",
     title: "Last Date of Abstract Submission",
-    date: "30 August 2027",
+    date: "30 June 2027",
     gradient: "from-lime-500 to-emerald-600",
     bg: "from-lime-50 to-emerald-50",
     border: "border-lime-200",
@@ -234,7 +234,7 @@ const dates = [
     icon: "📬",
     label: "NOTIFICATION",
     title: "Acceptance Notification",
-    date: "15 September 2027",
+    date: "15 August 2027",
     gradient: "from-teal-500 to-emerald-600",
     bg: "from-teal-50 to-emerald-50",
     border: "border-teal-200",
@@ -245,7 +245,7 @@ const dates = [
     icon: "📄",
     label: "DEADLINE",
     title: "Last Date of Full Paper Submission",
-    date: "30 September 2027",
+    date: "30 August 2027",
     gradient: "from-green-600 to-emerald-700",
     bg: "from-green-50 to-emerald-50",
     border: "border-green-200",
@@ -256,7 +256,7 @@ const dates = [
     icon: "💳",
     label: "REGISTRATION",
     title: "Last Date of Registration (Along with payment)",
-    date: "30 September 2027",
+    date: "7 October 2027",
     gradient: "from-emerald-500 to-teal-600",
     bg: "from-emerald-50 to-teal-50",
     border: "border-emerald-200",
@@ -267,7 +267,7 @@ const dates = [
     icon: "🎓",
     label: "MAIN EVENT",
     title: "Conference Dates",
-    date: "8ᵗʰ – 10ᵗʰ November 2027",
+    date: "8ᵗʰ – 12ᵗʰ November 2027",
     gradient: "from-green-500 to-emerald-700",
     bg: "from-green-50 to-emerald-50",
     border: "border-green-200",
@@ -479,12 +479,12 @@ function ImportantDates() {
 
 type AnnouncementItem = { icon: string; text: string; color: string; label: string };
 const announcements: AnnouncementItem[] = [
-  { icon: "🚀", text: "Abstract Submission Starts: June 1, 2027", color: "from-emerald-500 to-green-600", label: "OPEN" },
-  { icon: "⏰", text: "Last Date of Abstract Submission: August 30, 2027", color: "from-lime-500 to-emerald-600", label: "DEADLINE" },
-  { icon: "📬", text: "Acceptance Notification: Within 7 days of abstract review", color: "from-teal-500 to-emerald-600", label: "NOTIFICATION" },
-  { icon: "📄", text: "Last Date of Full Paper Submission: September 30, 2027", color: "from-green-600 to-emerald-700", label: "DEADLINE" },
-  { icon: "💳", text: "Last Date of Registration (Along with Payment): September 30, 2027", color: "from-emerald-600 to-teal-600", label: "REGISTRATION" },
-  { icon: "🎓", text: "Conference Dates: November 8-10, 2027", color: "from-green-500 to-emerald-700", label: "MAIN EVENT" },
+  { icon: "🚀", text: "Abstract Submission Starts: April 1, 2027", color: "from-emerald-500 to-green-600", label: "OPEN" },
+  { icon: "⏰", text: "Last Date of Abstract Submission: June 30, 2027", color: "from-lime-500 to-emerald-600", label: "DEADLINE" },
+  { icon: "📬", text: "Acceptance Notification: August 15, 2027", color: "from-teal-500 to-emerald-600", label: "NOTIFICATION" },
+  { icon: "📄", text: "Last Date of Full Paper Submission: August 30, 2027", color: "from-green-600 to-emerald-700", label: "DEADLINE" },
+  { icon: "💳", text: "Last Date of Registration (Along with Payment): October 7, 2027", color: "from-emerald-600 to-teal-600", label: "REGISTRATION" },
+  { icon: "🎓", text: "Conference Dates: November 8-12, 2027", color: "from-green-500 to-emerald-700", label: "MAIN EVENT" },
   { icon: "🚌", text: "Field Trip: November 11-12, 2027", color: "from-lime-500 to-green-600", label: "EXCURSION" },
   { icon: "📍", text: "Venue: Auditorium, Centurion University of Technology and Management, Paralakhemundi, Odisha - India", color: "from-teal-500 to-emerald-700", label: "VENUE" },
   { icon: "🏆", text: "Best Paper Awards & Recognition", color: "from-emerald-500 to-lime-600", label: "AWARDS" },
@@ -556,11 +556,11 @@ function About() {
     <RevealSection id="about" className="py-16">
       <div className="mx-auto max-w-5xl px-4">
         <h2 data-reveal="fade-up" className="text-center text-3xl font-bold text-emerald-900">
-          About ICEEA - ICETS 2027
+          About ICSEECA - ICETS 2027
         </h2>
         <div data-reveal="fade-up" className="mt-8 space-y-5 text-slate-700 leading-relaxed">
           <p>
-            ICEEA-2027 aims to bring together researchers, academicians, environmentalists,
+            ICSEECA -2027 aims to bring together researchers, academicians, environmentalists,
             policymakers, and industry leaders to address complex Earth and environmental
             challenges emerging during the Anthropocene epoch. The conference promotes
             interdisciplinary dialogue focusing on climate change, sustainability, natural
@@ -799,12 +799,12 @@ function Themes() {
 
 function DatesTable() {
   const rows: [string, string][] = [
-    ["Abstract submission starts", "01.06.2027"],
-    ["Last date of Submission of Abstract", "30.08.2027"],
-    ["Acceptance Notification Issued", "Within 7 days of Abstract Review"],
-    ["Last date of Full paper submission", "30.09.2027"],
-    ["Last Date of Registration", "30.09.2027"],
-    ["Conference dates", "8th – 10th November, 2027"],
+    ["Abstract submission starts", "01.04.2027"],
+    ["Last date of Submission of Abstract", "30.06.2027"],
+    ["Acceptance Notification Issued", "15.08.2027"],
+    ["Last date of Full paper submission", "30.08.2027"],
+    ["Last Date of Registration (Along with payment)", "07.10.2027"],
+    ["Conference dates", "8th – 12th November, 2027"],
   ];
   return (
     <RevealSection className="py-16">
@@ -846,9 +846,9 @@ function Fees() {
     ["Foreign Delegates (Teachers, Researchers, Scientists, Professors)", "US$ 300.00", "US$ 350.00"],
     ["Foreign Delegates (Students)", "US$ 100.00", "US$ 150.00"],
     ["Accompanying Guest (International)", "US$ 100.00", "US$ 125.00"],
-    ["Indian Delegates (Teachers, Researchers, Scientists, Professors)", "INR ₹3000.00", "INR ₹3500.00"],
-    ["Research Scholars", "INR ₹1000.00", "INR ₹1500.00"],
-    ["Indian Delegates (Students)", "INR ₹500.00", "INR ₹750.00"],
+    ["Indian Delegates (Teachers, Researchers, Scientists, and Professors)", "INR ₹4000.00", "INR ₹4500.00"],
+    ["Research Scholars", "INR ₹2000.00", "INR ₹2500.00"],
+    ["Indian Delegates (Students)", "INR ₹1000.00", "INR ₹1500.00"],
     ["Accompanying Guest (National)", "INR ₹1000.00", "INR ₹1500.00"],
   ];
   return (
@@ -882,8 +882,8 @@ function Fees() {
               <thead className="bg-emerald-700 text-white">
                 <tr>
                   <th className="p-3 text-left">Category</th>
-                  <th className="p-3 text-left">Early Bird (till 30-06-2026)</th>
-                  <th className="p-3 text-left">Late (after 31-07-2026)</th>
+                  <th className="p-3 text-left">Early Bird Registration Fee(31-08-2027)</th>
+                  <th className="p-3 text-left">Late Registration Fee after(30-09-2027)</th>
                 </tr>
               </thead>
               <tbody>
@@ -911,11 +911,11 @@ function Fees() {
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             <div className="rounded-lg bg-emerald-50 p-4">
               <div className="font-semibold text-emerald-900">Indian Participants</div>
-              <div className="mt-1 text-lg font-bold">INR ₹1500/-</div>
+              <div className="mt-1 text-lg font-bold">INR ₹3000/-</div>
             </div>
             <div className="rounded-lg bg-emerald-50 p-4">
               <div className="font-semibold text-emerald-900">International Participants</div>
-              <div className="mt-1 text-lg font-bold">USD $ 35.00</div>
+              <div className="mt-1 text-lg font-bold">USD $ 50.00</div>
             </div>
           </div>
           <div className="mt-6 rounded-lg border-l-4 border-amber-500 bg-amber-50 p-4">
@@ -934,18 +934,18 @@ function Fees() {
 
 const conveners = [
   {
-    name: "Dr. Contact Person",
+    name: "Prof. (Dr.) Prafulla Kumar Panda",
     role: "Conference Convener",
-    org: "Department of Civil Engineering, Centurion University of Technology and Management, Paralakhemundi, Odisha - India",
-    email: "conference@cutm.ac.in",
-    phone: "+91 XXXXXXXXXX",
+    org: "Dean, SoET & SoCDS, Centurion University of Technology and Management, Paralakhemundi, Odisha - India",
+    email: "prafullapanda@cutm.ac.in",
+    phone: "+91 8917258681",
   },
   {
-    name: "Prof. Department Head",
-    role: "HoD, Department of Civil Engineering",
+    name: "Prof. (Dr.) P Raja",
+    role: "Professor, School of Engineering and Technology",
     org: "Centurion University of Technology and Management, Paralakhemundi, Odisha - India",
-    email: "hod@cutm.ac.in",
-    phone: "+91 XXXXXXXXXX",
+    email: "prajaicariiswc@gmail.com",
+    phone: "+91 8875197316",
   },
   {
     name: "Dr. Jonathan Muthuswamy",
@@ -997,7 +997,7 @@ function Guidelines() {
           Please follow the structure below when preparing your abstract.
         </p>
         <div data-reveal="fade-up" className="mt-6 rounded-lg border-l-4 border-emerald-600 bg-emerald-50 p-4 text-sm animate-border-glow">
-          ⚠️ Abstract submission is now open. Last date: 30 August 2027.
+          ⚠️ Abstract submission is now open. Last date: 30 June 2027.
         </div>
 
         <div data-reveal="fade-up" className="mt-8 space-y-6 rounded-xl bg-white p-6 shadow-sm border card-hover">
@@ -1129,36 +1129,68 @@ const committee: { title: string; members: Member[] }[] = [
     title: "Chief Patrons",
     members: [
       {
-        name: "Prof. Priyabrata Sahu",
-        role: "Hon'ble Founder & Chancellor",
-        org: "Centurion University of Technology and Management, Paralakhemundi, Odisha",
+        name: "Prof. (Dr.) Mukti Kanta Mishra",
+        role: "President",
+        org: "CUTM, Odisha & AP",
         country: "India",
       },
       {
-        name: "Dr. Arturo Reyes Sandoval",
-        role: "Director General",
-        org: "National Polytechnic Institute (IPN), México City",
-        country: "México",
+        name: "Prof. (Dr.) D. N. Rao",
+        role: "Vice-President",
+        org: "CUTM, Odisha & AP",
+        country: "India",
+      },
+      {
+        name: "Prof. (Dr.) Supriya Pattanayak",
+        role: "Vice-Chancellor",
+        org: "CUTM, Odisha",
+        country: "India",
       },
     ],
   },
   {
-    title: "Conference Conveners & Coordinator",
+    title: "Patrons",
     members: [
       {
-        name: "Dr. Conference Convener",
-        role: "Conference Convener — Head, Department of Civil Engineering",
-        org: "Centurion University of Technology and Management, Paralakhemundi, Odisha",
+        name: "Prof. (Dr.) Biswajit Mishra",
+        role: "Pro-Vice Chancellor",
+        org: "CUTM, Odisha",
+        country: "India",
       },
       {
-        name: "Dr. Jonathan Muthuswamy Ponniah",
-        role: "International Coordinator — Professor, CIIEMAD",
-        org: "IPN, México City",
+        name: "Prof. (Dr.) Ajay Kumar Nayak",
+        role: "Pro-Vice Chancellor",
+        org: "CUTM, Odisha",
+        country: "India",
       },
       {
-        name: "Dr. Roque Juan Carrasco Aquino",
-        role: "Conference Coordinator — Coordinator, CIIEMAD",
-        org: "IPN, México City; President, INNRESP",
+        name: "Prof. (Dr.) Anita Patra",
+        role: "Registrar",
+        org: "CUTM, Odisha",
+        country: "India",
+      },
+    ],
+  },
+  {
+    title: "Conference Conveners & Organizing Secretaries",
+    members: [
+      {
+        name: "Prof. (Dr.) Prafulla Kumar Panda",
+        role: "Conference Convener — Dean, SoET & SoCDS",
+        org: "Centurion University of Technology and Management, Paralakhemundi, Odisha - India",
+        country: "India",
+      },
+      {
+        name: "Prof. (Dr.) P Raja",
+        role: "Organizing Secretary — Professor, School of Engineering and Technology",
+        org: "Centurion University of Technology and Management, Paralakhemundi, Odisha - India",
+        country: "India",
+      },
+      {
+        name: "Dr. Jonathan Muthuswamy",
+        role: "Organizing Secretary / International Coordinator",
+        org: "National Polytechnic Institute (IPN), Mexico City, Mexico",
+        country: "Mexico",
       },
     ],
   },
@@ -1166,24 +1198,51 @@ const committee: { title: string; members: Member[] }[] = [
     title: "Co-Conveners",
     members: [
       {
-        name: "Prof. Engineering Team",
-        role: "Head of Department",
-        org: "School of Engineering and Technology, CUTM, Paralakhemundi, Odisha",
+        name: "Dr. Rajib Majhi",
+        role: "Head of the Department, Department of Civil Engineering",
+        org: "Centurion University of Technology and Management, Odisha",
+        country: "India",
       },
       {
-        name: "Dr. Academic Lead",
-        role: "Faculty Coordinator",
-        org: "Centurion University of Technology and Management, India",
+        name: "Dr. Abhishek Das",
+        role: "Co-Coordinator, Centre for Data Science and Machine Learning",
+        org: "Centurion University of Technology and Management, Odisha",
+        country: "India",
+      },
+    ],
+  },
+  {
+    title: "Organizing Committee Members",
+    members: [
+      {
+        name: "Dr. Madan Rout",
+        role: "Faculty Member",
+        org: "Dept. of Civil Engineering, CUTM",
+        country: "India",
       },
       {
-        name: "Dr. Pedro Francisco Rodríguez Espinosa",
-        role: "Director, CIIEMAD",
-        org: "IPN, México City",
+        name: "Dr. Krushna Chandra Sethi",
+        role: "Faculty Member",
+        org: "Dept. of Civil Engineering, CUTM",
+        country: "India",
       },
       {
-        name: "Dr. International Liaison",
-        role: "Global Coordination Lead",
-        org: "Centurion University of Technology and Management, India",
+        name: "Dr. Aurobinda Bag",
+        role: "Faculty Member",
+        org: "Dept. of Electrical Engineering, CUTM",
+        country: "India",
+      },
+      {
+        name: "Prof. B. Bikram Narayan",
+        role: "Faculty Member",
+        org: "Dept. of Civil Engineering, CUTM",
+        country: "India",
+      },
+      {
+        name: "Prof. Dwity Sundar Rout",
+        role: "Faculty Member",
+        org: "Dept. of Agricultural Extension Education, CUTM",
+        country: "India",
       },
     ],
   },
@@ -1195,10 +1254,10 @@ function Committee() {
   return (
     <RevealSection id="committee" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 data-reveal="fade-up" className="text-center text-4xl font-bold text-emerald-900">ICEEA - ICETS 2027</h2>
+        <h2 data-reveal="fade-up" className="text-center text-4xl font-bold text-emerald-900">ICSEECA - ICETS 2027</h2>
         <p data-reveal="fade-up" className="mt-2 text-center text-xl text-slate-700">Conference Committee</p>
         <p data-reveal="fade-up" className="text-center text-sm text-slate-500">
-          Distinguished leaders and experts organizing ICEEA 2027
+          Distinguished leaders and experts organizing ICSEECA 2027
         </p>
 
         <div data-reveal="fade-up" className="mt-8 flex flex-wrap justify-center gap-2">
@@ -1355,87 +1414,7 @@ function Contact() {
 }
 
 function AnnouncementModal() {
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    const t = setTimeout(() => setOpen(true), 1200);
-    return () => clearTimeout(t);
-  }, []);
-
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    const autoClose = setTimeout(() => setOpen(false), 8000);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      clearTimeout(autoClose);
-    };
-  }, [open]);
-
-  if (!open) return null;
-  return createPortal(
-    <div
-      className="pointer-events-none fixed bottom-6 right-4 z-[9999] sm:bottom-4 sm:right-6"
-      onClick={() => setOpen(false)}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Announcement"
-    >
-      <div
-        className="pointer-events-auto animate-announce-in w-full max-w-sm overflow-hidden rounded-xl border border-emerald-200/70 bg-white shadow-2xl shadow-emerald-950/15 sm:max-w-md"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="h-1 w-full bg-gradient-to-r from-emerald-400 via-lime-400 to-emerald-400" />
-
-        {/* Horizontal layout: icon | content | close */}
-        <div className="flex items-center gap-3 px-4 py-3.5">
-          {/* Icon */}
-          <span className="relative grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 text-xl text-white shadow-lg shadow-emerald-500/30 ring-1 ring-white/20">
-            <span className="relative">📢</span>
-          </span>
-
-          <div className="min-w-0 flex-1">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] text-emerald-700 ring-1 ring-emerald-200">
-              <span className="relative h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />
-              Important Announcement
-            </span>
-
-            <h3 className="mt-1.5 text-sm font-bold text-slate-900 leading-snug">
-              Abstract Submission Deadline Extended
-            </h3>
-
-            <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-emerald-50 to-lime-50 px-2.5 py-1 ring-1 ring-emerald-100">
-                <span className="text-[11px]">🗓️</span>
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">New Deadline</span>
-                <span className="text-xs font-extrabold text-emerald-600">31 July 2026</span>
-              </span>
-              <motion.button
-                onClick={() => setOpen(false)}
-                whileTap={{ scale: 0.95 }}
-                className="rounded-full bg-gradient-to-r from-emerald-500 to-green-600 px-4 py-1.5 text-[11px] font-bold text-white shadow-md transition hover:brightness-110 active:scale-[0.98]"
-              >
-                Got it
-              </motion.button>
-            </div>
-          </div>
-
-          {/* Close button — clearly visible */}
-          <motion.button
-            onClick={() => setOpen(false)}
-            whileTap={{ scale: 0.9 }}
-            className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-slate-800 text-sm font-bold text-white shadow-md transition hover:bg-slate-900 active:scale-95"
-            aria-label="Close announcement"
-          >
-            ✕
-          </motion.button>
-        </div>
-      </div>
-    </div>,
-    document.body
-  );
+  return null;
 }
 
 function Home() {

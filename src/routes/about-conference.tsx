@@ -26,7 +26,7 @@ function AboutConferencePage() {
     { icon: "📜", title: "Policy Integration", desc: "Bridge the gap between scientific findings and actionable environmental policy for measurable real-world impact." },
   ];
   const highlights = [
-    { icon: "📅", label: "Conference Dates", value: "November 8–10, 2027" },
+    { icon: "📅", label: "Conference Dates", value: "November 8–12, 2027" },
     { icon: "📍", label: "Venue", value: "Centurion University, Paralakhemundi, Odisha" },
     { icon: "👥", label: "Expected Attendees", value: "500+ Researchers & Scholars" },
     { icon: "🌐", label: "Countries Represented", value: "30+ Nations" },
@@ -40,13 +40,13 @@ function AboutConferencePage() {
       <motion.section variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} style={{ background: "linear-gradient(135deg,#062b1a,#064e3b 50%,#0f172a)", padding: "80px 24px 90px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: -60, right: -60, width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle,rgba(52,211,153,.12),transparent 70%)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 820, margin: "0 auto" }}>
-          <span style={{ display: "inline-block", background: "rgba(52,211,153,.15)", border: "1px solid rgba(52,211,153,.3)", color: "#34d399", fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase" as const, padding: "6px 18px", borderRadius: 9999, marginBottom: 22 }}>About ICEEA · ICETS 2027</span>
+          <span style={{ display: "inline-block", background: "rgba(52,211,153,.15)", border: "1px solid rgba(52,211,153,.3)", color: "#34d399", fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase" as const, padding: "6px 18px", borderRadius: 9999, marginBottom: 22 }}>About ICSEECA · ICETS 2027</span>
           <h1 style={{ fontSize: "clamp(2rem,5vw,3.25rem)", fontWeight: 800, color: "#fff", lineHeight: 1.2, margin: 0 }}>
             About the <span style={{ background: "linear-gradient(90deg,#34d399,#a3e635)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Conference</span>
           </h1>
-          <p style={{ marginTop: 18, color: "#94a3b8", fontSize: "1.05rem", lineHeight: 1.75 }}>International Conference on Earth and Environment in the Anthropocene (ICEEA‑2027) &amp; 19th International Congress on Environmental &amp; Territorial Studies (ICETS‑2027)</p>
+          <p style={{ marginTop: 18, color: "#94a3b8", fontSize: "1.05rem", lineHeight: 1.75 }}>International Conference on Sustainable Earth, Environment, and Climate Action (ICSEECA) &amp; 19th International Congress on Environmental &amp; Territorial Studies (ICETS‑2027)</p>
           <p style={{marginTop:24, color:"#94a3b8", fontSize:"0.95rem", lineHeight:1.75, maxWidth:700, marginLeft:"auto", marginRight:"auto"}}>
-            The conference will feature keynote lectures by eminent scientists and presentations of peer-reviewed original research from participants worldwide. ICEEA-2027 aspires to become a landmark forum for shaping future directions in environmental resilience and sustainable development.
+            The conference will feature keynote lectures by eminent scientists and presentations of peer-reviewed original research from participants worldwide. ICSEECA-2027 aspires to become a landmark forum for shaping future directions in environmental resilience and sustainable development.
           </p>
         </div>
       </motion.section>
@@ -65,18 +65,18 @@ function AboutConferencePage() {
           ))}
         </div>
 
-        {/* About ICEEA */}
+        {/* About ICSEECA */}
         <div style={{ marginTop: 68 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
             <div style={{ width: 4, height: 38, borderRadius: 4, background: "linear-gradient(180deg,#10b981,#059669)", flexShrink: 0 }} />
-            <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 800, color: "#0f172a", margin: 0 }}>About ICEEA – 2027</h2>
+            <h2 style={{ fontSize: "clamp(1.4rem,3vw,1.9rem)", fontWeight: 800, color: "#0f172a", margin: 0 }}>About ICSEECA – 2027</h2>
           </div>
           <div style={{ background: "#fff", borderRadius: 20, padding: 36, boxShadow: "0 4px 24px rgba(0,0,0,.07)", border: "1px solid #e2e8f0" }}>
             <p style={{ color: "#475569", lineHeight: 1.85, fontSize: "0.97rem", margin: "0 0 18px" }}>
-              <strong style={{ color: "#0f172a" }}>ICEEA-2027</strong> aims to bring together researchers, academicians, environmentalists, policymakers, and industry leaders to address complex Earth and environmental challenges emerging during the <strong style={{ color: "#0f172a" }}>Anthropocene epoch</strong>. The conference promotes interdisciplinary dialogue focusing on climate change, sustainability, natural resources, geosciences, environmental degradation, and advanced technological solutions.
+              <strong style={{ color: "#0f172a" }}>ICSEECA -2027</strong> aims to bring together researchers, academicians, environmentalists, policymakers, and industry leaders to address complex Earth and environmental challenges emerging during the <strong style={{ color: "#0f172a" }}>Anthropocene epoch</strong>. The conference promotes interdisciplinary dialogue focusing on climate change, sustainability, natural resources, geosciences, environmental degradation, and advanced technological solutions.
             </p>
             <p style={{ color: "#475569", lineHeight: 1.85, fontSize: "0.97rem", margin: 0 }}>
-              The conference serves as a premier international forum for sharing knowledge, forging partnerships, and developing innovative strategies to address the most pressing environmental challenges of our time. ICEEA 2027 will feature keynote addresses, oral presentations, poster sessions, and interactive workshops designed to foster cross-disciplinary collaboration.
+              The conference serves as a premier international forum for sharing knowledge, forging partnerships, and developing innovative strategies to address the most pressing environmental challenges of our time. ICSEECA 2027 will feature keynote addresses, oral presentations, poster sessions, and interactive workshops designed to foster cross-disciplinary collaboration.
             </p>
           </div>
         </div>

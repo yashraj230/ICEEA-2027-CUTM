@@ -29,7 +29,10 @@ const nav: NavItem[] = [
   {
     label: "Submissions",
     children: [
-      ["Submit Abstract", "https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform"],
+      [
+        "Submit Abstract",
+        "https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform",
+      ],
       ["Submission Guidelines", "/submissions/guidelines"],
       ["Important Dates", "/important-dates"],
       ["Review Process", "/submissions/review"],
@@ -76,13 +79,20 @@ function NavLink({
 }) {
   if (href.startsWith("http")) {
     return (
-      <a href={href} target="_blank" rel="noreferrer" className={className} style={style} onClick={onClick}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        style={style}
+        onClick={onClick}
+      >
         {children}
       </a>
     );
   }
   return (
-    <Link to={href as any} className={className} style={style} onClick={onClick}>
+    <Link to={href as never} className={className} style={style} onClick={onClick}>
       {children}
     </Link>
   );
@@ -90,7 +100,8 @@ function NavLink({
 
 /* ── Marquee ────────────────────────────────────────────── */
 function Marquee() {
-  const msg = "🎓 ICEEA-ICETS 2027 at Centurion University, Paralakhemundi, Odisha • Nov 8-10, 2027  •  ";
+  const msg =
+    "🎓 ICSEECA - ICETS 2027 at Centurion University, Paralakhemundi, Odisha • Nov 8-12, 2027  •  ";
   return (
     <div
       style={{
@@ -125,7 +136,13 @@ function ChevronDown({ open, className }: { open: boolean; className?: string })
         flexShrink: 0,
       }}
     >
-      <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M2 3.5L5 6.5L8 3.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -247,12 +264,7 @@ function MobileNavItem({ item, onClose }: { item: NavItem; onClose: () => void }
           }}
         >
           {item.children.map(([label, href]) => (
-            <NavLink
-              key={label}
-              href={href}
-              className="ph2-mobile-sublink"
-              onClick={onClose}
-            >
+            <NavLink key={label} href={href} className="ph2-mobile-sublink" onClick={onClose}>
               <span className="ph2-dd-dot" />
               {label}
             </NavLink>
@@ -658,7 +670,8 @@ export default function PageHeader() {
             style={{
               width: "1px",
               height: scrolled ? "36px" : "48px",
-              background: "linear-gradient(to bottom, transparent, rgba(52,211,153,0.5), transparent)",
+              background:
+                "linear-gradient(to bottom, transparent, rgba(52,211,153,0.5), transparent)",
               animation: "ph2DividerPulse 3s ease-in-out infinite",
               transition: "height 0.4s ease",
             }}
@@ -727,7 +740,7 @@ export default function PageHeader() {
               <NavLink key={item.label} href={item.href!} className="ph2-nav-link">
                 {item.label}
               </NavLink>
-            )
+            ),
           )}
         </nav>
 
@@ -790,7 +803,13 @@ export default function PageHeader() {
           ))}
 
           {/* Mobile CTA */}
-          <div style={{ marginTop: "20px", paddingTop: "16px", borderTop: "1px solid rgba(52,211,153,0.15)" }}>
+          <div
+            style={{
+              marginTop: "20px",
+              paddingTop: "16px",
+              borderTop: "1px solid rgba(52,211,153,0.15)",
+            }}
+          >
             <NavLink
               href="https://docs.google.com/forms/d/e/1FAIpQLSd2pIc4oUaXXp9q28ZuUSGuKamIgBzWmZPntRzqFY614VvlDQ/viewform"
               onClick={closeMobile}

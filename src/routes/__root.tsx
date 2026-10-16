@@ -76,13 +76,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ICEEA 2027 CUTM" },
-      { name: "description", content: "ICEEA 2027 CUTM conference website" },
-      { name: "author", content: "ICEEA 2027 CUTM" },
-      { property: "og:title", content: "ICEEA 2027 CUTM" },
-      { property: "og:description", content: "ICEEA 2027 CUTM conference website" },
+      { title: "ICSEECA - ICETS 2027 CUTM" },
+      {
+        name: "description",
+        content:
+          "International Conference on Sustainable Energy, Environment, and Clean Architecture (ICSEECA - ICETS 2027) at Centurion University",
+      },
+      { name: "author", content: "CUTM - ICSEECA 2027" },
+      { property: "og:title", content: "ICSEECA - ICETS 2027 CUTM" },
+      {
+        property: "og:description",
+        content:
+          "International Conference on Sustainable Energy, Environment, and Clean Architecture (ICSEECA - ICETS 2027)",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "referrer", content: "strict-origin-when-cross-origin" },
+      { httpEquiv: "X-Content-Type-Options", content: "nosniff" },
+      { httpEquiv: "X-Frame-Options", content: "SAMEORIGIN" },
     ],
     links: [
       {

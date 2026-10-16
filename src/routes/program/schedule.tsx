@@ -8,8 +8,8 @@ import Footer from "../../components/Footer";
 export const Route = createFileRoute("/program/schedule")({
   head: () => ({
     meta: [
-      { title: "Conference Schedule | ICEEA - ICETS 2027" },
-      { name: "description", content: "Day-by-day program for ICEEA-ICETS 2027 — November 8-10, 2027 at Centurion University, Paralakhemundi, Odisha" },
+      { title: "Conference Schedule | ICSEECA - ICETS 2027" },
+      { name: "description", content: "Day-by-day program for ICSEECA-ICETS 2027 — November 8-12, 2027 at Centurion University, Paralakhemundi, Odisha" },
     ],
   }),
   component: SchedulePage,
